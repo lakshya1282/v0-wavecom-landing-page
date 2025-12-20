@@ -1,13 +1,27 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Poppins } from "next/font/google"
+import { Inter, Playfair_Display } from "next/font/google"
+import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
+import { AOSProvider } from "@/components/aos-provider"
 import "./globals.css"
 
 const _inter = Inter({ subsets: ["latin"] })
-const _poppins = Poppins({
+const _playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
+})
+
+const _bebasNeue = localFont({
+  src: [
+    {
+      path: "../public/fonts/BebasNeue-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-display",
 })
 
 export const metadata: Metadata = {
@@ -42,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans antialiased`}>
-        {children}
+        <AOSProvider>{children}</AOSProvider>
         <Analytics />
       </body>
     </html>
