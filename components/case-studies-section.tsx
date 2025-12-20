@@ -2,66 +2,115 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { Thermometer, VolumeX, Maximize, ArrowUpRight } from "lucide-react"
+import { Maximize, ArrowUpRight } from "lucide-react"
 
 interface CaseStudy {
   id: number
   title: string
   location: string
   image: string
-  badge: {
-    icon: "temp" | "silent" | "area"
-    value: string
-    label: string
-  }
-  challenge: string
-  solution: string
-  result: string
+  area: string
+  challenges: string[]
 }
 
 const caseStudies: CaseStudy[] = [
   {
     id: 1,
-    title: "Apex Steelworks Manufacturing Unit",
-    location: "Raipur Industrial Estate",
-    image: "/industrial-manufacturing-facility-with-workers-and.jpg",
-    badge: { icon: "temp", value: "12°C", label: "Temp Drop" },
-    challenge: "High heat trapping in weaving section.",
-    solution: "Top-discharge units with humidity control.",
-    result: "Ambient temp reduced by 10°C.",
+    title: "TVS Service Center",
+    location: "Raipur",
+    image: "/images/tvs-service-center.jpg",
+    area: "1,300 Sq.Ft.",
+    challenges: [
+      "Heat from vehicle engines & equipment",
+      "Dust and fumes in workshop area",
+      "Need for consistent airflow during repairs",
+    ],
   },
   {
     id: 2,
-    title: "Grand Horizon Banquet Hall",
-    location: "Mumbai City Centre",
-    image: "/modern-banquet-hall-interior-with-hvac-ceiling-duc.jpg",
-    badge: { icon: "silent", value: "Silent", label: "Operation" },
-    challenge: "Noise disruption during events.",
-    solution: "VRV+AHU system with acoustic insulation.",
-    result: "Zero noise complaints from guests.",
+    title: "Supershop",
+    location: "Bemetara",
+    image: "/images/supershop.jpg",
+    area: "1,400 Sq.Ft.",
+    challenges: [
+      "Maintaining fresh air for customers",
+      "Temperature control for perishable goods",
+      "Energy-efficient cooling for retail space",
+    ],
   },
   {
     id: 3,
-    title: "E-Kart Logistics Hub (Zone B)",
-    location: "Chennai Logistics Park",
-    image: "/large-warehouse-logistics-center-with-cooling-syst.jpg",
-    badge: { icon: "area", value: "15,000 Sq. Ft.", label: "Covered" },
-    challenge: "Uneven cooling in massive warehouse.",
-    solution: "HVLS fans with evaporative cooling.",
-    result: "Uniform temperature across all zones.",
+    title: "Sheetal Motors",
+    location: "Raipur",
+    image: "/images/sheetal-motors.jpg",
+    area: "2,300 Sq.Ft.",
+    challenges: [
+      "Large showroom with glass facade",
+      "Uniform cooling across multi-level space",
+      "Maintaining comfortable customer experience",
+    ],
+  },
+  {
+    id: 4,
+    title: "Restaurant",
+    location: "Raipur",
+    image: "/images/restaurant.jpg",
+    area: "1,500 Sq.Ft.",
+    challenges: [
+      "Kitchen heat and smoke extraction",
+      "Comfortable dining atmosphere",
+      "Odor control in semi-open space",
+    ],
+  },
+  {
+    id: 5,
+    title: "Bluebirds Hospital",
+    location: "Raipur",
+    image: "/images/hospital.jpg",
+    area: "1,200 Sq.Ft.",
+    challenges: [
+      "Sterile air quality for patient care",
+      "Quiet operation for recovery wards",
+      "24/7 reliable cooling system",
+    ],
+  },
+  {
+    id: 6,
+    title: "Residential Bungalow",
+    location: "Raipur",
+    image: "/images/bungalow.jpg",
+    area: "1,500 Sq.Ft.",
+    challenges: [
+      "Whole-house cooling solution",
+      "Energy-efficient for daily use",
+      "Silent operation for living spaces",
+    ],
+  },
+  {
+    id: 7,
+    title: "Ramani Surgicals Office",
+    location: "Raipur",
+    image: "/images/office.jpg",
+    area: "1,400 Sq.Ft.",
+    challenges: [
+      "Comfortable workstation environment",
+      "Even air distribution across desks",
+      "Low noise for focused work",
+    ],
+  },
+  {
+    id: 8,
+    title: "Marriage Hall",
+    location: "Raipur",
+    image: "/images/marriage-hall.jpg",
+    area: "3,500 Sq.Ft.",
+    challenges: [
+      "Large crowd cooling during events",
+      "High ceiling ventilation challenges",
+      "Quick temperature control for gatherings",
+    ],
   },
 ]
-
-const BadgeIcon = ({ type }: { type: "temp" | "silent" | "area" }) => {
-  switch (type) {
-    case "temp":
-      return <Thermometer className="w-4 h-4" />
-    case "silent":
-      return <VolumeX className="w-4 h-4" />
-    case "area":
-      return <Maximize className="w-4 h-4" />
-  }
-}
 
 export function CaseStudiesSection() {
   const [hoveredId, setHoveredId] = useState<number | null>(null)
@@ -75,19 +124,18 @@ export function CaseStudiesSection() {
           <p className="text-gray-500 text-lg max-w-2xl mx-auto">See how Wavecom solutions transformed these spaces</p>
         </div>
 
-        {/* Cards Container - using CSS Grid for stable layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-auto md:h-[500px]">
-          {caseStudies.map((study) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {caseStudies.map((study, index) => {
             const isHovered = hoveredId === study.id
 
             return (
               <div
                 key={study.id}
-                className="relative rounded-3xl overflow-hidden cursor-pointer h-[400px] md:h-full transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.02]"
+                className="relative rounded-2xl overflow-hidden cursor-pointer h-[450px] md:h-[500px] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.02]"
                 onMouseEnter={() => setHoveredId(study.id)}
                 onMouseLeave={() => setHoveredId(null)}
                 data-aos="fade-up"
-                data-aos-delay={study.id * 100}
+                data-aos-delay={index * 50}
               >
                 {/* Background Image */}
                 <Image
@@ -101,44 +149,41 @@ export function CaseStudiesSection() {
                 <div
                   className={`absolute inset-0 transition-opacity duration-300 ${
                     isHovered
-                      ? "bg-gradient-to-t from-black/80 via-black/50 to-black/20"
+                      ? "bg-gradient-to-t from-sky-900/90 via-sky-900/60 to-sky-900/30"
                       : "bg-gradient-to-t from-black/60 via-transparent to-transparent"
                   }`}
                 />
 
-                {/* Badge */}
+                {/* Badge - Area Covered */}
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl px-3 py-2 flex items-center gap-2 shadow-lg">
                   <div className="text-sky-700">
-                    <BadgeIcon type={study.badge.icon} />
+                    <Maximize className="w-5 h-5" />
                   </div>
                   <div className="text-right">
-                    <p className="text-sky-900 font-bold text-sm leading-tight">{study.badge.value}</p>
-                    <p className="text-gray-500 text-xs">{study.badge.label}</p>
+                    <p className="text-sky-900 font-bold text-sm leading-tight">{study.area}</p>
+                    <p className="text-gray-500 text-xs">Covered</p>
                   </div>
                 </div>
 
-                {/* Challenge/Solution/Result - Only visible on hover */}
                 <div
-                  className={`absolute left-4 right-4 bottom-32 transition-all duration-300 ${
+                  className={`absolute left-4 right-4 top-20 transition-all duration-300 ${
                     isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
                   }`}
                 >
-                  <div className="space-y-1 text-white text-sm">
-                    <p>
-                      <span className="font-bold">Challenge:</span> {study.challenge}
-                    </p>
-                    <p>
-                      <span className="font-bold">Solution:</span> {study.solution}
-                    </p>
-                    <p>
-                      <span className="font-bold">Result:</span> {study.result}
-                    </p>
-                  </div>
+                  <p className="text-white font-bold text-base mb-3">Challenges Solved:</p>
+                  <ul className="space-y-2">
+                    {study.challenges.map((challenge, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-white/90 text-sm">
+                        <span className="text-emerald-400 mt-0.5">•</span>
+                        <span>{challenge}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 {/* Footer Card */}
                 <div className="absolute bottom-4 left-4 right-4">
-                  <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 flex items-center justify-between shadow-lg">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 flex items-center justify-between shadow-lg">
                     <div>
                       <h3 className="text-sky-900 font-bold text-lg leading-tight">{study.title}</h3>
                       <p className="text-gray-500 text-sm mt-1">{study.location}</p>
