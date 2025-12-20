@@ -44,7 +44,7 @@ export function HeroSection() {
         <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Fan_and_Cooler_Hero_Section_Video-ZaeL3bvYrDFwg36jpIIXJr8oPlftkf.mp4" type="video/mp4" />
       </video>
 
-      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/50 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/60 via-black/40 to-transparent" />
 
       {/* Header/Navigation */}
       <header className="absolute top-0 left-0 right-0 z-20 px-6 py-4">
@@ -89,11 +89,11 @@ export function HeroSection() {
         </div>
       </header>
 
-      <div className="absolute inset-x-0 top-24 z-10 flex flex-col items-start justify-center px-6 pt-8 md:px-16 lg:px-24">
-        <div className="relative text-left">
-          {/* "Inspired by" text - green italic, positioned to the right */}
+      <div className="absolute inset-x-0 top-32 z-10 flex flex-col items-start justify-center px-6 pt-8 md:px-16 lg:px-24">
+        <div className="relative text-left space-y-2">
+          {/* "Inspired by" text - green italic */}
           <div
-            className={`absolute -top-2 right-0 md:right-8 transition-all duration-1000 ease-out ${
+            className={`transition-all duration-1000 ease-out ${
               showInspired ? "translate-y-0 opacity-100" : "-translate-y-8 opacity-0"
             }`}
           >
@@ -113,7 +113,7 @@ export function HeroSection() {
 
           {/* "Nature." text - 3D chunky white with period */}
           <h1
-            className={`font-display text-7xl font-black md:text-8xl lg:text-9xl transition-all duration-1000 ease-out ${
+            className={`font-display text-7xl font-black md:text-8xl lg:text-9xl leading-tight transition-all duration-1000 ease-out ${
               showNature ? "translate-y-0 opacity-100 scale-100" : "translate-y-10 opacity-0 scale-95"
             }`}
             style={{

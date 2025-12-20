@@ -1,7 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Playfair_Display } from "next/font/google"
-import localFont from "next/font/local"
+import { Inter, Playfair_Display, Bebas_Neue } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { AOSProvider } from "@/components/aos-provider"
 import "./globals.css"
@@ -13,14 +12,9 @@ const _playfair = Playfair_Display({
   variable: "--font-serif",
 })
 
-const _bebasNeue = localFont({
-  src: [
-    {
-      path: "../public/fonts/BebasNeue-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-  ],
+const _bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
   variable: "--font-display",
 })
 

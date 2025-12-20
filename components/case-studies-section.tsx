@@ -120,8 +120,8 @@ export function CaseStudiesSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12" data-aos="fade-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-sky-900 mb-4">Cooling in Action</h2>
-          <p className="text-gray-500 text-lg max-w-2xl mx-auto">See how Wavecom solutions transformed these spaces</p>
+          <h2 className="text-5xl md:text-6xl font-black text-sky-900 mb-4">Cooling in Action</h2>
+          <p className="text-gray-600 text-xl font-semibold max-w-2xl mx-auto">See how Wavecom solutions transformed these spaces</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -170,10 +170,10 @@ export function CaseStudiesSection() {
                     isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
                   }`}
                 >
-                  <p className="text-white font-bold text-base mb-3">Challenges Solved:</p>
+                  <p className="text-white font-black text-lg mb-3">Challenges Solved:</p>
                   <ul className="space-y-2">
                     {study.challenges.map((challenge, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-white/90 text-sm">
+                      <li key={idx} className="flex items-start gap-2 text-white/90 text-base font-semibold">
                         <span className="text-emerald-400 mt-0.5">•</span>
                         <span>{challenge}</span>
                       </li>
@@ -184,9 +184,9 @@ export function CaseStudiesSection() {
                 {/* Footer Card */}
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 flex items-center justify-between shadow-lg">
-                    <div>
-                      <h3 className="text-sky-900 font-bold text-lg leading-tight">{study.title}</h3>
-                      <p className="text-gray-500 text-sm mt-1">{study.location}</p>
+                  <div>
+                      <h3 className="text-sky-900 font-black text-xl leading-tight">{study.title}</h3>
+                      <p className="text-gray-600 text-base font-semibold mt-1">{study.location}</p>
                     </div>
                     <div
                       className={`w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white transition-all duration-300 ${

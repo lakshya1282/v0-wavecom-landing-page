@@ -123,10 +123,10 @@ export function ProductSection() {
           <div className="flex justify-center mb-4">
             <Leaf className="w-8 h-8 text-emerald-500" />
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display tracking-wide text-sky-900 font-bold">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wider text-sky-900 font-black">
             OUR PRODUCTS
           </h2>
-          <p className="text-gray-500 mt-3 text-lg">Cooling the future, naturally.</p>
+          <p className="text-gray-600 mt-3 text-xl font-semibold">Cooling the future, naturally.</p>
           <div className="w-24 h-1 bg-emerald-500 mx-auto mt-4" />
         </div>
 
@@ -160,7 +160,7 @@ export function ProductSection() {
                       hoveredIndex === index ? "opacity-100" : "opacity-0 pointer-events-none"
                     }`}
                   >
-                    <h4 className="text-white text-xl md:text-2xl font-bold tracking-wide mb-6 border-b-2 border-emerald-400 pb-2">
+                    <h4 className="text-white text-2xl md:text-3xl font-black tracking-wide mb-6 border-b-2 border-emerald-400 pb-2">
                       KEY FEATURES:
                     </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-md">
@@ -184,14 +184,14 @@ export function ProductSection() {
 
               <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-6">
                 <div data-aos="fade-up" data-aos-delay={index * 100 + 100}>
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-sky-900 mb-2">{product.title}</h3>
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-sky-900 mb-2">{product.title}</h3>
                   {product.subtitle && (
-                    <p className="text-lg md:text-xl text-emerald-600 font-bold">{product.subtitle}</p>
+                    <p className="text-xl md:text-2xl text-emerald-600 font-bold">{product.subtitle}</p>
                   )}
                 </div>
 
                 <p
-                  className="text-gray-500 text-base md:text-lg leading-relaxed font-medium"
+                  className="text-gray-600 text-lg md:text-xl leading-relaxed font-semibold"
                   data-aos="fade-up"
                   data-aos-delay={index * 100 + 150}
                 >
