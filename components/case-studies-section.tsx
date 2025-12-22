@@ -124,14 +124,14 @@ export function CaseStudiesSection() {
           <p className="text-gray-600 text-xl font-semibold max-w-2xl mx-auto">See how Wavecom solutions transformed these spaces</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {caseStudies.map((study, index) => {
             const isHovered = hoveredId === study.id
 
             return (
               <div
                 key={study.id}
-                className="relative rounded-2xl overflow-hidden cursor-pointer h-[450px] md:h-[500px] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.02]"
+                className="relative rounded-2xl overflow-hidden cursor-pointer h-[350px] md:h-[400px] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.02]"
                 onMouseEnter={() => setHoveredId(study.id)}
                 onMouseLeave={() => setHoveredId(null)}
                 data-aos="fade-up"

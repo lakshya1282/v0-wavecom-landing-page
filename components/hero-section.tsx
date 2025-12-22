@@ -50,7 +50,7 @@ export function HeroSection() {
         preload="auto"
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Fan_and_Cooler_Hero_Section_Video-ZaeL3bvYrDFwg36jpIIXJr8oPlftkf.mp4" type="video/mp4" />
+        <source src="/Video/home.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/60 via-black/40 to-transparent" />
