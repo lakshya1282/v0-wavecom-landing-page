@@ -1,4 +1,4 @@
-import { StickyHeader } from "@/components/sticky-header"
+import { StickyHeader } from "@/components/sticky-header-new"
 import { EvapHeroSection } from "@/components/evap-hero-section"
 import { WhyChooseEvap } from "@/components/why-choose-evap"
 import { EvapProductsSectionNew } from "@/components/evap-products-section-new"

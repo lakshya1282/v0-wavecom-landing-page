@@ -1,4 +1,4 @@
-import { StickyHeader } from "@/components/sticky-header"
+import { StickyHeader } from "@/components/sticky-header-new"
 import { ContactSection } from "@/components/contact-section-new"
 import { Footer } from "@/components/footer"
 
@@ -15,7 +15,14 @@ export default function ContactPage() {
           color: #1e293b !important;
         }
         [role="banner"] button {
-          background-color: #3b82f6 !important;
+          color: #1e293b !important;
+        }
+        [role="banner"] button:not(.bg-lime-400) {
+          background-color: transparent !important;
+        }
+        /* Ensure dropdown text is dark */
+        [role="banner"] div.absolute a {
+          color: #1f2937 !important;
         }
       `}</style>
       <main>
