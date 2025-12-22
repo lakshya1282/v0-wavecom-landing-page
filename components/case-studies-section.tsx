@@ -11,6 +11,7 @@ interface CaseStudy {
   image: string
   area: string
   challenges: string[]
+  videoUrl: string
 }
 
 const caseStudies: CaseStudy[] = [
@@ -20,6 +21,7 @@ const caseStudies: CaseStudy[] = [
     location: "Raipur",
     image: "/images/tvs-service-center.jpg",
     area: "1,300 Sq.Ft.",
+    videoUrl: "https://youtu.be/ncQCgZRQ_qw?si=gM9UExyDsT8niRhH",
     challenges: [
       "Heat from vehicle engines & equipment",
       "Dust and fumes in workshop area",
@@ -32,6 +34,7 @@ const caseStudies: CaseStudy[] = [
     location: "Bemetara",
     image: "/images/supershop.jpg",
     area: "1,400 Sq.Ft.",
+    videoUrl: "https://youtu.be/hFxGf1qPkdI?si=LIP3HH7pKp0oB8zg",
     challenges: [
       "Maintaining fresh air for customers",
       "Temperature control for perishable goods",
@@ -44,6 +47,7 @@ const caseStudies: CaseStudy[] = [
     location: "Raipur",
     image: "/images/sheetal-motors.jpg",
     area: "2,300 Sq.Ft.",
+    videoUrl: "https://youtu.be/BV3U3YZdcBA?si=W5cajo8C5O6diyrI",
     challenges: [
       "Large showroom with glass facade",
       "Uniform cooling across multi-level space",
@@ -56,6 +60,7 @@ const caseStudies: CaseStudy[] = [
     location: "Raipur",
     image: "/images/restaurant.jpg",
     area: "1,500 Sq.Ft.",
+    videoUrl: "https://youtu.be/e2aSaiv2k1M?si=Yd2LPbUVXVdVzt4w",
     challenges: [
       "Kitchen heat and smoke extraction",
       "Comfortable dining atmosphere",
@@ -68,6 +73,7 @@ const caseStudies: CaseStudy[] = [
     location: "Raipur",
     image: "/images/hospital.jpg",
     area: "1,200 Sq.Ft.",
+    videoUrl: "https://youtu.be/wUfCsEH2qRM?si=luSeXTaWpWNKkDWM",
     challenges: [
       "Sterile air quality for patient care",
       "Quiet operation for recovery wards",
@@ -80,6 +86,7 @@ const caseStudies: CaseStudy[] = [
     location: "Raipur",
     image: "/images/bungalow.jpg",
     area: "1,500 Sq.Ft.",
+    videoUrl: "https://youtu.be/BgAJkHHXqkI?si=0iaNIPcBW_7Cs57N",
     challenges: [
       "Whole-house cooling solution",
       "Energy-efficient for daily use",
@@ -92,6 +99,7 @@ const caseStudies: CaseStudy[] = [
     location: "Raipur",
     image: "/images/office.jpg",
     area: "1,400 Sq.Ft.",
+    videoUrl: "https://youtu.be/SvKf7EFJkh0?si=g3nYuomtlfN6y7rf1",
     challenges: [
       "Comfortable workstation environment",
       "Even air distribution across desks",
@@ -104,6 +112,7 @@ const caseStudies: CaseStudy[] = [
     location: "Raipur",
     image: "/images/marriage-hall.jpg",
     area: "3,500 Sq.Ft.",
+    videoUrl: "https://youtu.be/KVaD7sUka90?si=P9GZuoACtLOM60qk",
     challenges: [
       "Large crowd cooling during events",
       "High ceiling ventilation challenges",
@@ -114,6 +123,12 @@ const caseStudies: CaseStudy[] = [
 
 export function CaseStudiesSection() {
   const [hoveredId, setHoveredId] = useState<number | null>(null)
+  const [selectedVideoId, setSelectedVideoId] = useState<number | null>(null)
+
+  const getYouTubeEmbedUrl = (url: string) => {
+    const videoId = url.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=)([^&\n?#]+)/)?.[1]
+    return videoId ? `https://www.youtube.com/embed/${videoId}` : ""
+  }
 
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-gray-100 to-white">
@@ -183,25 +198,61 @@ export function CaseStudiesSection() {
 
                 {/* Footer Card */}
                 <div className="absolute bottom-4 left-4 right-4">
-                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 flex items-center justify-between shadow-lg">
-                  <div>
+                  <button
+                    onClick={() => setSelectedVideoId(study.id)}
+                    className="w-full bg-white/95 backdrop-blur-sm rounded-xl p-4 flex items-center justify-between shadow-lg hover:bg-white/98 transition-colors"
+                  >
+                    <div className="text-left">
                       <h3 className="text-sky-900 font-black text-xl leading-tight">{study.title}</h3>
                       <p className="text-gray-600 text-base font-semibold mt-1">{study.location}</p>
                     </div>
                     <div
-                      className={`w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white transition-all duration-300 ${
+                      className={`w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white transition-all duration-300 flex-shrink-0 ${
                         isHovered ? "opacity-100 scale-100" : "opacity-0 scale-75"
                       }`}
                     >
                       <ArrowUpRight className="w-5 h-5" />
                     </div>
-                  </div>
+                  </button>
                 </div>
               </div>
             )
           })}
         </div>
       </div>
+
+      {/* Video Modal */}
+      {selectedVideoId && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          onClick={() => setSelectedVideoId(null)}
+        >
+          <div
+            className="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setSelectedVideoId(null)}
+              className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center text-white transition-colors"
+            >
+              <span className="text-2xl">×</span>
+            </button>
+
+            {/* Video Container */}
+            <div className="relative w-full bg-black" style={{ paddingBottom: "56.25%" }}>
+              <iframe
+                src={getYouTubeEmbedUrl(
+                  caseStudies.find((study) => study.id === selectedVideoId)?.videoUrl || ""
+                )}
+                className="absolute inset-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
