@@ -213,7 +213,7 @@ export function ProductSection() {
 
                 <div className="flex items-center gap-2" data-aos="fade-up" data-aos-delay={index * 100 + 250}>
                   <a
-                    href="#"
+                    href={index === 0 ? "/products" : index === 1 ? "/vrv" : "/industrial"}
                     className="inline-flex items-center gap-2 text-sky-600 hover:text-sky-800 font-bold transition-colors"
                   >
                     Learn More

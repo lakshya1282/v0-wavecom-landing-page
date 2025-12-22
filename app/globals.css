@@ -193,6 +193,36 @@
   transition-delay: 500ms;
 }
 
+/* Splash screen fade-out animation */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.animate-fade-out {
+  animation: fadeOut 1s ease-in-out forwards;
+}
+
+/* Page fade-in animation */
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main {
+  animation: fadeInPage 1.2s ease-in-out;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
