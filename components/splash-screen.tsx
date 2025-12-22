@@ -1,19 +1,17 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 
 export function SplashScreen() {
   const [isVisible, setIsVisible] = useState(true)
   const [showFadeOut, setShowFadeOut] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
-    // Check if splash has already been shown
-    const hasSeenSplash = sessionStorage.getItem("splashShown")
-
-    if (hasSeenSplash) {
-      setIsVisible(false)
-      return
-    }
+    // Show splash on every page navigation
+    setIsVisible(true)
+    setShowFadeOut(false)
 
     // Wait for video to end and then fade out
     const handleVideoEnd = () => {
@@ -21,7 +19,6 @@ export function SplashScreen() {
       // After fade out animation completes, hide splash
       const timer = setTimeout(() => {
         setIsVisible(false)
-        sessionStorage.setItem("splashShown", "true")
       }, 1000)
       return () => clearTimeout(timer)
     }
@@ -29,12 +26,13 @@ export function SplashScreen() {
     // Get video element and add listener
     const video = document.querySelector('video[src*="splash"]') as HTMLVideoElement
     if (video) {
+      video.play()
       video.addEventListener("ended", handleVideoEnd)
       return () => {
         video.removeEventListener("ended", handleVideoEnd)
       }
     }
-  }, [])
+  }, [pathname])
 
   if (!isVisible) return null
 

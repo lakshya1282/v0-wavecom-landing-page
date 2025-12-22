@@ -18,11 +18,33 @@ export function AOSProvider({ children }: { children: React.ReactNode }) {
       rootMargin: "0px 0px -50px 0px",
     })
 
-    // Observe all elements with data-aos attribute
-    const elements = document.querySelectorAll("[data-aos]")
-    elements.forEach((el) => observer.observe(el))
+    const observeElements = () => {
+      const elements = document.querySelectorAll("[data-aos]")
+      elements.forEach((el) => {
+        // Only observe if not already being observed
+        if (!el.classList.contains("aos-animate")) {
+          observer.observe(el)
+        }
+      })
+    }
 
-    return () => observer.disconnect()
+    // Initial observation
+    observeElements()
+
+    // Watch for DOM changes and re-observe new elements
+    const mutationObserver = new MutationObserver(() => {
+      observeElements()
+    })
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
+    })
+
+    return () => {
+      observer.disconnect()
+      mutationObserver.disconnect()
+    }
   }, [])
 
   return <>{children}</>
