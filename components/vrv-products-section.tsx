@@ -38,6 +38,18 @@ const products: Product[] = [
       "Industry-leading energy efficiency and reliability.",
     ],
   },
+  {
+    name: "Duct AC",
+    mainImage: "/images/vrv/products/ductAc.JPG",
+    components: [],
+    description: [
+      "Advanced duct air conditioning system for centralized cooling.",
+      "Perfect for large residential and commercial spaces.",
+      "Seamless integration with existing ventilation systems.",
+      "Quiet operation with advanced noise reduction technology.",
+      "Energy-efficient design with precise temperature control.",
+    ],
+  },
 ]
 
 export function VrvProductsSection() {

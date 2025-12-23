@@ -136,7 +136,7 @@ export function CaseStudiesSection() {
         {/* Section Header */}
         <div className="text-center mb-12" data-aos="fade-up">
           <h2 className="text-5xl md:text-6xl font-black text-sky-900 mb-4">Cooling in Action</h2>
-          <p className="text-gray-600 text-xl font-semibold max-w-2xl mx-auto">See how Wavecom solutions transformed these spaces</p>
+          <p className="text-gray-600 text-xl font-semibold max-w-2xl mx-auto">See how Wavecon solutions transformed these spaces</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

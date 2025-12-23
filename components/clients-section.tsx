@@ -133,7 +133,7 @@ export function ClientsSection() {
           data-aos-delay="200"
         >
           <p className="text-muted-foreground text-base md:text-lg font-semibold">
-            🌟 Trusted by <span className="font-black text-foreground">500+ leading brands</span> across various industries
+            🌟 Trusted by <span className="font-black text-foreground">500+ Clients</span> across various industries
           </p>
         </div>
       </div>

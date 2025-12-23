@@ -3,7 +3,7 @@ import { StickyHeader } from "@/components/sticky-header-new"
 import { VrvHeroSection } from "@/components/vrv-hero-section"
 import { WhyChooseVrv } from "@/components/why-choose-vrv"
 import { VrvProductsSection } from "@/components/vrv-products-section"
-import { WhyWavecomVrv } from "@/components/why-wavecom-vrv"
+import { WhyWaveconVrv } from "@/components/why-wavecon-vrv"
 import { VrvProjectsSection } from "@/components/vrv-projects-section"
 import { ShareChallengesSection } from "@/components/share-challenges-section"
 import { Footer } from "@/components/footer"
@@ -16,7 +16,7 @@ export default function VRVPage() {
         <VrvHeroSection />
         <WhyChooseVrv />
         <VrvProductsSection />
-        <WhyWavecomVrv />
+        <WhyWaveconVrv />
         <VrvProjectsSection />
         <div className="py-8 px-4 bg-white">
           <div className="container mx-auto max-w-7xl">

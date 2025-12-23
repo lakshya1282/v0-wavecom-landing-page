@@ -20,7 +20,7 @@ const _bebasNeue = Bebas_Neue({
 })
 
 export const metadata: Metadata = {
-  title: "Wavecom - Cooling The Future, Naturally",
+  title: "Wavecon - Cooling The Future, Naturally",
   description:
     "One Brand. One Ecosystem. Total Air Solutions. Evaporative Cooling Systems, Industrial Ventilation & Air Conditioning.",
   generator: "v0.app",

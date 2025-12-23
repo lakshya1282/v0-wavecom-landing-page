@@ -3,7 +3,7 @@ import { StickyHeader } from "@/components/sticky-header-new"
 import { IndustrialHeroSection } from "@/components/industrial-hero-section"
 import { WhyChooseIndustrial } from "@/components/why-choose-industrial"
 import { IndustrialProductsSection } from "@/components/industrial-products-section"
-import { WhyWavecomIndustrial } from "@/components/why-wavecom-industrial"
+import { WhyWaveconIndustrial } from "@/components/why-wavecon-industrial"
 import { DoneProjectsSection } from "@/components/done-projects-section"
 import { ShareChallengesSection } from "@/components/share-challenges-section"
 import { Footer } from "@/components/footer"
@@ -16,7 +16,7 @@ export default function IndustrialPage() {
         <IndustrialHeroSection />
         <WhyChooseIndustrial />
         <IndustrialProductsSection />
-        <WhyWavecomIndustrial />
+        <WhyWaveconIndustrial />
         <DoneProjectsSection />
         <div className="py-8 px-4 bg-white">
           <div className="container mx-auto max-w-7xl">

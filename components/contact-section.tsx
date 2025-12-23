@@ -98,7 +98,7 @@ export function ContactSection() {
                 Share your cooling challenges with us.
               </h1>
               <p className="text-lg md:text-xl font-semibold text-white/90">
-                Get in touch with Wavecom and see what our affordable cooling solutions can do for your business.
+                Get in touch with Wavecon and see what our affordable cooling solutions can do for your business.
               </p>
             </div>
 
@@ -110,7 +110,7 @@ export function ContactSection() {
                 </div>
               </div>
               <div>
-                <p className="font-black text-lg">Wavecom Team</p>
+                <p className="font-black text-lg">Wavecon Team</p>
                 <p className="text-white/80 font-semibold text-sm">COOLING SOLUTIONS EXPERT</p>
               </div>
             </div>
@@ -256,7 +256,7 @@ export function ContactSection() {
               {/* Privacy Notice */}
               <div className="text-xs text-gray-600 leading-relaxed">
                 <p>
-                  Wavecom needs the contact information you provide to us to contact you about our products and services. You may unsubscribe from these communications at anytime. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, check out our{" "}
+                  Wavecon needs the contact information you provide to us to contact you about our products and services. You may unsubscribe from these communications at anytime. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, check out our{" "}
                   <a href="#" className="text-sky-600 hover:text-sky-800 font-semibold">
                     Privacy Policy
                   </a>
@@ -398,7 +398,7 @@ export function ContactSection() {
                   {/* Privacy Notice */}
                   <div className="text-xs text-gray-600 leading-relaxed">
                     <p>
-                      Wavecom needs the contact information you provide to us to contact you about our products and services. You may unsubscribe from these communications at anytime. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, check out our{" "}
+                      Wavecon needs the contact information you provide to us to contact you about our products and services. You may unsubscribe from these communications at anytime. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, check out our{" "}
                       <a href="#" className="text-sky-600 hover:text-sky-800 font-semibold">
                         Privacy Policy
                       </a>

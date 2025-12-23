@@ -3,7 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Updated color tokens for Wavecom branding - sky blue and emerald green */
+/* Updated color tokens for Wavecon branding - sky blue and emerald green */
 :root {
   --background: oklch(0.98 0.005 210);
   --foreground: oklch(0.2 0.02 250);

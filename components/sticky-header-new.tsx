@@ -55,7 +55,7 @@ export function StickyHeader() {
             <Link href="/" className="flex-shrink-0 z-50">
               <Image
                 src="/images/wc.png"
-                alt="Wavecom Logo"
+                alt="Wavecon Logo"
                 width={100}
                 height={32}
                 className="h-8 w-auto"

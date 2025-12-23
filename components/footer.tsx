@@ -17,7 +17,7 @@ export function Footer() {
             <Link href="/" className="inline-block">
               <Image
                 src="/images/wc.png"
-                alt="Wavecom Logo"
+                alt="Wavecon Logo"
                 width={140}
                 height={50}
                 className="h-12 w-auto"
@@ -128,7 +128,7 @@ export function Footer() {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-white/70 text-sm">
           <p className="font-semibold">
-            © {currentYear} Wavecom. All rights reserved.
+            © {currentYear} Wavecon. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-emerald-400 transition-colors font-semibold">

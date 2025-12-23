@@ -15,8 +15,8 @@ interface Product {
 
 const products: Product[] = [
   {
-    name: "Industrial Fans",
-    mainImage: "/images/evap/wind/main.png",
+    name: "Centrifugal Exhaust Fans",
+    mainImage: "/images/industry/products/p1.png",
     components: [],
     description: [
       "Heavy-duty industrial fans engineered for maximum airflow.",
@@ -27,31 +27,27 @@ const products: Product[] = [
     ],
   },
   {
-    name: "Heavy-Duty Ventilation",
-    mainImage: "/images/evap/Ocean/main.png",
-    components: [
-      {
-        id: "1",
-        image: "/images/evap/Ocean/Screenshot 2025-12-21 172206.png",
-        label: "Component 1",
-      },
-      {
-        id: "2",
-        image: "/images/evap/Ocean/Screenshot 2025-12-21 172214.png",
-        label: "Component 2",
-      },
-      {
-        id: "3",
-        image: "/images/evap/Ocean/Screenshot 2025-12-21 172221.png",
-        label: "Component 3",
-      },
-    ],
+    name: "HVLS Fans",
+    mainImage: "/images/industry/products/hvls.png",
+    components: [],
     description: [
       "Professional-grade ventilation system for industrial applications.",
       "Advanced air circulation technology for optimal environment control.",
-      "Remote operation and monitoring capabilities available.",
+      "Available in 3 sizes: 12 feet, 16 feet, 24 feet.",
       "Built for continuous operation in demanding industrial settings.",
       "Premium durability with comprehensive warranty and support.",
+    ],
+  },
+  {
+    name: "Axial Exhaust Fan",
+    mainImage: "/images/industry/products/IMG_4583.WEBP",
+    components: [],
+    description: [
+      "Specialized air circulation solution for large industrial spaces.",
+      "Engineered for optimal airflow distribution and coverage.",
+      "Reduces energy consumption while maintaining superior air quality.",
+      "Tested and proven in demanding manufacturing environments.",
+      "Easy installation and minimal downtime during deployment.",
     ],
   },
 ]

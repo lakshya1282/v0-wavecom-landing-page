@@ -3,7 +3,7 @@ import { StickyHeader } from "@/components/sticky-header-new"
 import { ProductsHeroSection } from "@/components/products-hero-section"
 import { WhyChooseEvap } from "@/components/why-choose-evap"
 import { EvapProductsSectionNew } from "@/components/evap-products-section-new"
-import { WhyWavecomSection } from "@/components/why-wavecom-section"
+import { WhyWaveconSection } from "@/components/why-wavecon-section"
 import { DoneProjectsSection } from "@/components/done-projects-section"
 import { ShareChallengesSection } from "@/components/share-challenges-section"
 import { Footer } from "@/components/footer"
@@ -16,7 +16,7 @@ export default function ProductsPage() {
         <ProductsHeroSection />
         <WhyChooseEvap />
         <EvapProductsSectionNew />
-        <WhyWavecomSection />
+        <WhyWaveconSection />
         <DoneProjectsSection />
         <div className="py-8 px-4 bg-white">
           <div className="container mx-auto max-w-7xl">
