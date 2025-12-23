@@ -1,5 +1,5 @@
 import { StickyHeader } from "@/components/sticky-header-new"
-import { EvapHeroSection } from "@/components/evap-hero-section"
+import { ProductsHeroSection } from "@/components/products-hero-section"
 import { WhyChooseEvap } from "@/components/why-choose-evap"
 import { EvapProductsSectionNew } from "@/components/evap-products-section-new"
 import { WhyWavecomSection } from "@/components/why-wavecom-section"
@@ -12,7 +12,7 @@ export default function ProductsPage() {
     <>
       <main>
         <StickyHeader />
-        <EvapHeroSection />
+        <ProductsHeroSection />
         <WhyChooseEvap />
         <EvapProductsSectionNew />
         <WhyWavecomSection />

@@ -1,8 +1,8 @@
 import { StickyHeader } from "@/components/sticky-header-new"
-import { EvapHeroSection } from "@/components/evap-hero-section"
-import { WhyChooseEvap } from "@/components/why-choose-evap"
-import { EvapProductsSectionNew } from "@/components/evap-products-section-new"
-import { WhyWavecomSection } from "@/components/why-wavecom-section"
+import { VrvHeroSection } from "@/components/vrv-hero-section"
+import { WhyChooseVrv } from "@/components/why-choose-vrv"
+import { VrvProductsSection } from "@/components/vrv-products-section"
+import { WhyWavecomVrv } from "@/components/why-wavecom-vrv"
 import { DoneProjectsSection } from "@/components/done-projects-section"
 import { ShareChallengesSection } from "@/components/share-challenges-section"
 import { Footer } from "@/components/footer"
@@ -12,10 +12,10 @@ export default function VRVPage() {
     <>
       <main>
         <StickyHeader />
-        <EvapHeroSection />
-        <WhyChooseEvap />
-        <EvapProductsSectionNew />
-        <WhyWavecomSection />
+        <VrvHeroSection />
+        <WhyChooseVrv />
+        <VrvProductsSection />
+        <WhyWavecomVrv />
         <DoneProjectsSection />
         <ShareChallengesSection />
       </main>

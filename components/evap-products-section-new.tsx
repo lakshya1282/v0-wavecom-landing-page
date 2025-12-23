@@ -106,12 +106,13 @@ export function EvapProductsSectionNew() {
                 {/* Left Side - Image and Components Grid */}
                 <div>
                   {/* Main Product Image */}
-                  <div className="relative w-full h-64 md:h-80 overflow-hidden rounded-lg mb-8 border-2 border-gray-200">
+                  <div className="relative w-full h-96 overflow-hidden rounded-lg mb-8 shadow-xl bg-white flex items-center justify-center">
                     <Image
                       src={product.mainImage}
                       alt={`${product.name} main product`}
-                      fill
-                      className="object-cover"
+                      width={450}
+                      height={350}
+                      className="object-contain w-full h-full"
                     />
                   </div>
 
@@ -123,12 +124,13 @@ export function EvapProductsSectionNew() {
                           key={component.id}
                           className="flex flex-col items-center"
                         >
-                          <div className="relative w-full h-24 md:h-28 overflow-hidden rounded-lg border-2 border-gray-300 mb-3">
+                          <div className="relative w-full h-24 md:h-28 overflow-hidden rounded-lg mb-3 bg-white shadow-md flex items-center justify-center">
                             <Image
                               src={component.image}
                               alt={`${product.name} ${component.label}`}
-                              fill
-                              className="object-cover"
+                              width={150}
+                              height={120}
+                              className="object-contain"
                             />
                           </div>
                           <p className="text-sm text-center text-gray-600 font-medium">

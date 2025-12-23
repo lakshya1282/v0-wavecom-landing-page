@@ -50,16 +50,18 @@ export function StickyHeader() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-14 md:h-16">
-          {/* Logo */}
-          <Link href="/" className="flex-shrink-0 z-50">
-            <Image
-              src="/images/wc.png"
-              alt="Wavecom Logo"
-              width={100}
-              height={32}
-              className="h-8 w-auto"
-            />
-          </Link>
+          {/* Logo - Only visible on scroll */}
+          {isScrolled && (
+            <Link href="/" className="flex-shrink-0 z-50">
+              <Image
+                src="/images/wc.png"
+                alt="Wavecom Logo"
+                width={100}
+                height={32}
+                className="h-8 w-auto"
+              />
+            </Link>
+          )}
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex flex-1 justify-center">
@@ -117,12 +119,14 @@ export function StickyHeader() {
             </ul>
           </nav>
 
-          {/* Desktop CTA Button */}
-          <Link href="/contact" className="hidden md:block">
-            <Button className="bg-lime-400 hover:bg-lime-500 text-gray-900 font-bold text-sm px-4 py-2">
-              Get Quote
-            </Button>
-          </Link>
+          {/* Desktop CTA Button - Only visible on scroll */}
+          {isScrolled && (
+            <Link href="/contact" className="hidden md:block">
+              <Button className="bg-lime-400 hover:bg-lime-500 text-gray-900 font-bold text-sm px-4 py-2">
+                Get Quote
+              </Button>
+            </Link>
+          )}
 
           {/* Mobile Menu Button */}
           <button
