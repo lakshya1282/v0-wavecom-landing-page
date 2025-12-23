@@ -68,7 +68,7 @@ export function VrvProjectsSection() {
       <div className="container mx-auto max-w-7xl">
         <div className="mb-20" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-4 text-sky-900 leading-tight">
-            Our Done Projects
+            Our satisfied customers
           </h2>
           <p className="text-emerald-600 text-lg md:text-xl font-bold">
             VRV+AHU cooling solutions trusted by leading businesses
