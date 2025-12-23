@@ -15,11 +15,11 @@ interface Product {
 
 const products: Product[] = [
   {
-    name: "VRV Pro",
-    mainImage: "/images/evap/wind/main.png",
+    name: "Chiller",
+    mainImage: "/images/vrv/products/chiller.png",
     components: [],
     description: [
-      "Advanced VRV+AHU cooling system for modern commercial applications.",
+      "Advanced VRV chiller system for modern commercial applications.",
       "Engineered for maximum efficiency and reliability.",
       "Perfect for office buildings, shopping malls, and commercial facilities.",
       "Features smart temperature control with zoning capabilities.",
@@ -27,25 +27,9 @@ const products: Product[] = [
     ],
   },
   {
-    name: "VRV Elite",
-    mainImage: "/images/evap/Ocean/main.png",
-    components: [
-      {
-        id: "1",
-        image: "/images/evap/Ocean/Screenshot 2025-12-21 172206.png",
-        label: "Component 1",
-      },
-      {
-        id: "2",
-        image: "/images/evap/Ocean/Screenshot 2025-12-21 172214.png",
-        label: "Component 2",
-      },
-      {
-        id: "3",
-        image: "/images/evap/Ocean/Screenshot 2025-12-21 172221.png",
-        label: "Component 3",
-      },
-    ],
+    name: "VRV",
+    mainImage: "/images/vrv/products/vrv.png",
+    components: [],
     description: [
       "Premium VRV system combining advanced technology and performance.",
       "Intelligent capacity control for optimal efficiency.",

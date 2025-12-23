@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { StickyHeader } from "@/components/sticky-header-new"
 import { IndustrialHeroSection } from "@/components/industrial-hero-section"
 import { WhyChooseIndustrial } from "@/components/why-choose-industrial"
@@ -17,6 +18,13 @@ export default function IndustrialPage() {
         <IndustrialProductsSection />
         <WhyWavecomIndustrial />
         <DoneProjectsSection />
+        <div className="py-8 px-4 bg-white">
+          <div className="container mx-auto max-w-7xl">
+            <Link href="/industrial" className="inline-flex items-center gap-2 text-lg font-semibold text-emerald-600 hover:text-emerald-700 transition-colors">
+               View all projects Industrial Fans →
+            </Link>
+          </div>
+        </div>
         <ShareChallengesSection />
       </main>
       <Footer />
