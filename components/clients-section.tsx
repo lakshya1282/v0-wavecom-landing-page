@@ -80,7 +80,7 @@ export function ClientsSection() {
             Clients Who Trust Us
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground font-semibold max-w-2xl mx-auto">
-            Join leading brands that have transformed their spaces with Wavecom solutions
+            Join leading brands that have transformed their spaces with Wavecon solutions
           </p>
         </div>
 
@@ -133,7 +133,7 @@ export function ClientsSection() {
           data-aos-delay="200"
         >
           <p className="text-muted-foreground text-base md:text-lg font-semibold">
-            🌟 Trusted by <span className="font-black text-foreground">{clients.length}+ leading brands</span> across various industries
+            🌟 Trusted by <span className="font-black text-foreground">500+ leading brands</span> across various industries
           </p>
         </div>
       </div>
