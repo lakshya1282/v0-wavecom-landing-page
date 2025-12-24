@@ -104,7 +104,7 @@ export function IndustrialProjectsSection() {
                   <div
                     className={`absolute inset-0 transition-opacity duration-300 ${
                       hoveredIndex === index
-                        ? "bg-gradient-to-t from-sky-900/90 via-sky-900/60 to-sky-900/30 opacity-100"
+                        ? "bg-linear-to-t from-sky-900/90 via-sky-900/60 to-sky-900/30 opacity-100"
                         : "opacity-0"
                     }`}
                   />
@@ -120,7 +120,7 @@ export function IndustrialProjectsSection() {
                       <ul className="space-y-3">
                         {project.challenges.map((challenge, idx) => (
                           <li key={idx} className="flex items-start gap-3 text-white/90 text-base font-semibold">
-                            <span className="text-emerald-400 mt-0.5 flex-shrink-0">•</span>
+                            <span className="text-emerald-400 mt-0.5 shrink-0">•</span>
                             <span>{challenge}</span>
                           </li>
                         ))}

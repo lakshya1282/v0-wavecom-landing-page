@@ -41,7 +41,7 @@ export function SplashScreen() {
   if (!isVisible) return null
 
   return (
-    <div className={`fixed inset-0 z-[9999] bg-black ${showFadeOut ? "animate-fade-out" : ""}`}>
+    <div className={`fixed inset-0 z-9999 bg-black ${showFadeOut ? "animate-fade-out" : ""}`}>
       {/* Video Background */}
       <video
         autoPlay

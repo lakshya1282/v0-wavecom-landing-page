@@ -90,7 +90,7 @@ export function ContactSection() {
     <section className="w-full bg-white py-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen pt-20 md:pt-24">
         {/* Left Side - Blue Background with Text */}
-        <div className="bg-gradient-to-br from-blue-600 to-blue-800 flex flex-col justify-center p-8 md:p-12 text-white order-2 lg:order-1">
+        <div className="bg-linear-to-br from-blue-600 to-blue-800 flex flex-col justify-center p-8 md:p-12 text-white order-2 lg:order-1">
           <div className="space-y-8">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-4">
@@ -103,7 +103,7 @@ export function ContactSection() {
 
             {/* Person Card */}
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+              <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center shrink-0">
                 <div className="w-14 h-14 rounded-full bg-emerald-400 flex items-center justify-center text-white font-black text-lg">
                   W
                 </div>
@@ -129,7 +129,7 @@ export function ContactSection() {
                   placeholder="Message"
                   value={formData.message}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-50 text-gray-900 placeholder-gray-400 min-h-[100px] text-sm ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-50 text-gray-900 placeholder-gray-400 min-h-25 text-sm ${
                     errors.message ? "border-red-500" : "border-gray-300"
                   }`}
                 />

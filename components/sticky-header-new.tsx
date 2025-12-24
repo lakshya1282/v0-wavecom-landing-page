@@ -54,13 +54,13 @@ export function StickyHeader() {
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo - Visible on scroll or always on contact page */}
           {(isScrolled || pathname === "/contact") && (
-            <Link href="/" className="flex-shrink-0 z-50">
+            <Link href="/" className="shrink-0 z-50">
               <Image
-                src="/images/wc.png"
+                src="/wc.png"
                 alt="Wavecon Logo"
-                width={150}
-                height={48}
-                className="h-16 w-auto"
+                width={399}
+                height={128}
+                className="h-[128px] w-auto"
               />
             </Link>
           )}
