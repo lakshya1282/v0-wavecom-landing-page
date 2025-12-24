@@ -88,7 +88,7 @@ export function ContactSection() {
 
   return (
     <section className="w-full bg-white py-0">
-      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
+      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen pt-20 md:pt-24">
         {/* Left Side - Blue Background with Text */}
         <div className="bg-gradient-to-br from-blue-600 to-blue-800 flex flex-col justify-center p-8 md:p-12 text-white order-2 lg:order-1">
           <div className="space-y-8">

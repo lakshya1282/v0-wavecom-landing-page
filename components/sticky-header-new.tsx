@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -16,6 +17,7 @@ export function StickyHeader() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isProductsOpen, setIsProductsOpen] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,27 +51,27 @@ export function StickyHeader() {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-14 md:h-16">
-          {/* Logo - Only visible on scroll */}
-          {isScrolled && (
+        <div className="flex items-center justify-between h-20 md:h-24">
+          {/* Logo - Visible on scroll or always on contact page */}
+          {(isScrolled || pathname === "/contact") && (
             <Link href="/" className="flex-shrink-0 z-50">
               <Image
                 src="/images/wc.png"
                 alt="Wavecon Logo"
-                width={100}
-                height={32}
-                className="h-8 w-auto"
+                width={150}
+                height={48}
+                className="h-16 w-auto"
               />
             </Link>
           )}
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex flex-1 justify-center">
-            <ul className="flex gap-6 lg:gap-8 items-center">
+            <ul className="flex gap-8 lg:gap-12 items-center">
               <li>
                 <Link
                   href="/"
-                  className={`text-sm lg:text-base font-semibold transition-colors hover:opacity-70 ${
+                  className={`text-base lg:text-lg font-semibold transition-colors hover:opacity-70 ${
                     isScrolled ? "text-gray-900" : "text-blue-500"
                   }`}
                 >
@@ -81,7 +83,7 @@ export function StickyHeader() {
               <li className="relative group">
                 <button
                   onClick={() => setIsProductsOpen(!isProductsOpen)}
-                  className={`text-sm lg:text-base font-semibold transition-colors hover:opacity-70 flex items-center gap-1 ${
+                  className={`text-base lg:text-lg font-semibold transition-colors hover:opacity-70 flex items-center gap-1 ${
                     isScrolled ? "text-gray-900" : "text-blue-500"
                   }`}
                 >
@@ -97,7 +99,7 @@ export function StickyHeader() {
                     <Link
                       key={product.href}
                       href={product.href}
-                      className="block px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-emerald-50 hover:text-emerald-600 transition-colors"
+                      className="block px-4 py-3 text-base font-semibold text-gray-900 hover:bg-emerald-50 hover:text-emerald-600 transition-colors"
                       onClick={() => setIsProductsOpen(false)}
                     >
                       {product.name}
@@ -109,7 +111,7 @@ export function StickyHeader() {
               <li>
                 <Link
                   href="/contact"
-                  className={`text-sm lg:text-base font-semibold transition-colors hover:opacity-70 ${
+                  className={`text-base lg:text-lg font-semibold transition-colors hover:opacity-70 ${
                     isScrolled ? "text-gray-900" : "text-blue-500"
                   }`}
                 >
@@ -119,10 +121,10 @@ export function StickyHeader() {
             </ul>
           </nav>
 
-          {/* Desktop CTA Button - Only visible on scroll */}
-          {isScrolled && (
+          {/* Desktop CTA Button - Visible on scroll or always on contact page */}
+          {(isScrolled || pathname === "/contact") && (
             <Link href="/contact" className="hidden md:block">
-              <Button className="bg-lime-400 hover:bg-lime-500 text-gray-900 font-bold text-sm px-4 py-2">
+              <Button className="bg-lime-400 hover:bg-lime-500 text-gray-900 font-bold text-base md:text-lg px-6 py-3">
                 Get Quote
               </Button>
             </Link>

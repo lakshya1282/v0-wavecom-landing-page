@@ -59,7 +59,7 @@ export function HeroSection() {
       <header className="absolute top-0 left-0 right-0 z-20 px-4 py-3 md:py-4">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           {/* Logo */}
-          <img src="/images/wc.png" alt="Wave Coolers Logo" className="h-8 md:h-12 w-auto drop-shadow-lg" />
+          <img src="/images/wc" alt="Wave Coolers Logo" className="h-16 md:h-20 w-auto drop-shadow-lg" />
 
           {/* Desktop Navigation */}
           <nav className="hidden items-center gap-6 lg:gap-8 md:flex">

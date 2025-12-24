@@ -16,11 +16,11 @@ export function Footer() {
           <div className="space-y-6">
             <Link href="/" className="inline-block">
               <Image
-                src="/images/wc.png"
+                src="/images/wc"
                 alt="Wavecon Logo"
-                width={140}
-                height={50}
-                className="h-12 w-auto"
+                width={210}
+                height={75}
+                className="h-18 w-auto"
               />
             </Link>
             <p className="text-white/80 font-semibold leading-relaxed text-sm">
