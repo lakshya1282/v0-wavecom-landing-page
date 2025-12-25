@@ -5,6 +5,25 @@ import { CaseStudiesSection } from "@/components/case-studies-section"
 import { ClientsSection } from "@/components/clients-section"
 import { ShareChallengesSection } from "@/components/share-challenges-section"
 import { Footer } from "@/components/footer"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Wavecon – Cooling The Future, Naturally",
+  description:
+    "Wavecon delivers complete air solutions including evaporative cooling systems, industrial ventilation, and VRV + AHU HVAC solutions for commercial and industrial use.",
+  keywords: [
+    "evaporative cooling systems",
+    "industrial ventilation",
+    "industrial fans",
+    "VRV cooling",
+    "AHU HVAC",
+    "commercial cooling solutions",
+    "Wavecon",
+  ],
+  alternates: {
+    canonical: "https://wavecon.com",
+  },
+}
 
 export default function Home() {
   return (

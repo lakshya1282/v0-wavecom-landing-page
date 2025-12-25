@@ -1,6 +1,23 @@
 import { StickyHeader } from "@/components/sticky-header-new"
 import { ContactSection } from "@/components/contact-section-new"
 import { Footer } from "@/components/footer"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Contact Wavecon",
+  description:
+    "Contact Wavecon for customized evaporative cooling, industrial ventilation, and HVAC solutions. Speak with our experts today.",
+  keywords: [
+    "contact Wavecon",
+    "HVAC consultation",
+    "cooling system enquiry",
+    "industrial cooling solutions",
+  ],
+  alternates: {
+    canonical: "https://wavecon.com/contact",
+  },
+}
+
 
 export default function ContactPage() {
   return (

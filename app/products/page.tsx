@@ -7,6 +7,23 @@ import { WhyWaveconSection } from "@/components/why-wavecon-section"
 import { DoneProjectsSection } from "@/components/done-projects-section"
 import { ShareChallengesSection } from "@/components/share-challenges-section"
 import { Footer } from "@/components/footer"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Evaporative Cooling Systems",
+  description:
+    "Explore Wavecon’s evaporative cooling systems designed for energy efficiency, large spaces, and eco-friendly cooling solutions.",
+  keywords: [
+    "evaporative cooling systems",
+    "industrial air coolers",
+    "commercial cooling systems",
+    "energy efficient cooling",
+  ],
+  alternates: {
+    canonical: "https://wavecon.com/products",
+  },
+}
+
 
 export default function ProductsPage() {
   return (
