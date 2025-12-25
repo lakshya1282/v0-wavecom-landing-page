@@ -16,11 +16,11 @@ export function Footer() {
           <div className="space-y-6">
             <Link href="/" className="inline-block">
               <Image
-                src="/images/wc"
+                src="/wc.png"
                 alt="Wavecon Logo"
-                width={210}
-                height={75}
-                className="h-18 w-auto"
+                width={399}
+                height={128}
+                className="h-[128px] w-auto"
               />
             </Link>
             <p className="text-white/80 font-semibold leading-relaxed text-sm">
@@ -45,7 +45,7 @@ export function Footer() {
                   href="#"
                   className="text-white/80 hover:text-emerald-400 font-semibold transition-colors text-sm"
                 >
-                  Industrak Systems
+                  Industrial Systems
                 </Link>
               </li>
               <li>
@@ -71,14 +71,7 @@ export function Footer() {
                   About Us
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-white/80 hover:text-emerald-400 font-semibold transition-colors text-sm"
-                >
-                  Case Studies
-                </Link>
-              </li>
+
               <li>
                 <Link
                   href="#"
