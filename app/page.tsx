@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   description:
     "Wavecon delivers complete air solutions including evaporative cooling systems, industrial ventilation, and VRV + AHU HVAC solutions for commercial and industrial use.",
   keywords: [
+    "thewavecon",
     "evaporative cooling systems",
     "industrial ventilation",
     "industrial fans",
@@ -19,6 +20,9 @@ export const metadata: Metadata = {
     "AHU HVAC",
     "commercial cooling solutions",
     "Wavecon",
+    "wavecon",
+    "wavecon raipur",
+    "wave raipur"
   ],
   alternates: {
     canonical: "https://wavecon.com",
