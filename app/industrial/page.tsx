@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { StickyHeader } from "@/components/sticky-header-new"
+import { ProductStickyHeader } from "@/components/product-sticky-header"
 import { IndustrialHeroSection } from "@/components/industrial-hero-section"
 import { WhyChooseIndustrial } from "@/components/why-choose-industrial"
 import { IndustrialProductsSection } from "@/components/industrial-products-section"
@@ -30,7 +30,7 @@ export default function IndustrialPage() {
   return (
     <>
       <main>
-        <StickyHeader />
+        <ProductStickyHeader />
         <IndustrialHeroSection />
         <WhyChooseIndustrial />
         <IndustrialProductsSection />
@@ -39,7 +39,7 @@ export default function IndustrialPage() {
         <div className="py-8 px-4 bg-white">
           <div className="container mx-auto max-w-7xl">
             <Link href="/case" className="inline-flex items-center gap-2 text-lg font-semibold text-lime-600 hover:text-lime-700 transition-colors">
-               View all projects Industrial Fans →
+              View all projects Industrial Fans →
             </Link>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { StickyHeader } from "@/components/sticky-header-new"
+import { ProductStickyHeader } from "@/components/product-sticky-header"
 import { VrvHeroSection } from "@/components/vrv-hero-section"
 import { WhyChooseVrv } from "@/components/why-choose-vrv"
 import { VrvProductsSection } from "@/components/vrv-products-section"
@@ -32,7 +32,7 @@ export default function VRVPage() {
   return (
     <>
       <main>
-        <StickyHeader />
+        <ProductStickyHeader />
         <VrvHeroSection />
         <WhyChooseVrv />
         <VrvProductsSection />

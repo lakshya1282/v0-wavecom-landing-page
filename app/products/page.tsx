@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { StickyHeader } from "@/components/sticky-header-new"
+import { ProductStickyHeader } from "@/components/product-sticky-header"
 import { ProductsHeroSection } from "@/components/products-hero-section"
 import { WhyChooseEvap } from "@/components/why-choose-evap"
 import { EvapProductsSectionNew } from "@/components/evap-products-section-new"
@@ -29,7 +29,7 @@ export default function ProductsPage() {
   return (
     <>
       <main>
-        <StickyHeader />
+        <ProductStickyHeader />
         <ProductsHeroSection />
         <WhyChooseEvap />
         <EvapProductsSectionNew />
