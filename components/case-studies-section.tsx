@@ -189,7 +189,7 @@ export function CaseStudiesSection() {
                   <ul className="space-y-2">
                     {study.challenges.map((challenge, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-white/90 text-base font-semibold">
-                        <span className="text-emerald-400 mt-0.5">•</span>
+                        <span className="text-lime-400 mt-0.5">•</span>
                         <span>{challenge}</span>
                       </li>
                     ))}
@@ -207,7 +207,7 @@ export function CaseStudiesSection() {
                       <p className="text-gray-600 text-base font-semibold mt-1">{study.location}</p>
                     </div>
                     <div
-                      className={`w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white transition-all duration-300 flex-shrink-0 ${
+                      className={`w-10 h-10 rounded-full bg-lime-500 flex items-center justify-center text-white transition-all duration-300 flex-shrink-0 ${
                         isHovered ? "opacity-100 scale-100" : "opacity-0 scale-75"
                       }`}
                     >

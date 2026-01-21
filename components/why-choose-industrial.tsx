@@ -43,7 +43,7 @@ export function WhyChooseIndustrial() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-4 text-sky-900 leading-tight">
             Why Choose Industrial Fans
           </h2>
-          <p className="text-emerald-600 text-lg md:text-xl max-w-4xl mx-auto font-bold">
+          <p className="text-lime-600 text-lg md:text-xl max-w-4xl mx-auto font-bold">
             Powerful ventilation solutions engineered for industrial excellence
           </p>
         </div>

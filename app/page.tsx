@@ -5,6 +5,7 @@ import { CaseStudiesSection } from "@/components/case-studies-section"
 import { ClientsSection } from "@/components/clients-section"
 import { ShareChallengesSection } from "@/components/share-challenges-section"
 import { Footer } from "@/components/footer"
+import CaseStudiesSectionNew from "@/components/case"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {

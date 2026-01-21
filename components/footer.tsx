@@ -35,7 +35,7 @@ export function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="text-white/80 hover:text-emerald-400 font-semibold transition-colors text-sm"
+                  className="text-white/80 hover:text-lime-400 font-semibold transition-colors text-sm"
                 >
                   Evaporative Coolers
                 </Link>
@@ -43,7 +43,7 @@ export function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="text-white/80 hover:text-emerald-400 font-semibold transition-colors text-sm"
+                  className="text-white/80 hover:text-lime-400 font-semibold transition-colors text-sm"
                 >
                   Industrial Systems
                 </Link>
@@ -51,7 +51,7 @@ export function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="text-white/80 hover:text-emerald-400 font-semibold transition-colors text-sm"
+                  className="text-white/80 hover:text-lime-400 font-semibold transition-colors text-sm"
                 >
                   VRV AHU
                 </Link>
@@ -66,7 +66,7 @@ export function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="text-white/80 hover:text-emerald-400 font-semibold transition-colors text-sm"
+                  className="text-white/80 hover:text-lime-400 font-semibold transition-colors text-sm"
                 >
                   About Us
                 </Link>
@@ -75,7 +75,7 @@ export function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="text-white/80 hover:text-emerald-400 font-semibold transition-colors text-sm"
+                  className="text-white/80 hover:text-lime-400 font-semibold transition-colors text-sm"
                 >
                   Contact Us
                 </Link>
@@ -90,7 +90,7 @@ export function Footer() {
               <li>
                 <a
                   href="/contact"
-                  className="text-white/80 hover:text-emerald-400 font-semibold transition-colors text-sm"
+                  className="text-white/80 hover:text-lime-400 font-semibold transition-colors text-sm"
                 >
                   Contact Us
                 </a>
@@ -98,7 +98,7 @@ export function Footer() {
               <li>
                 <a
                   href="/contact"
-                  className="text-white/80 hover:text-emerald-400 font-semibold transition-colors text-sm"
+                  className="text-white/80 hover:text-lime-400 font-semibold transition-colors text-sm"
                 >
                   Send us a Message
                 </a>
@@ -106,7 +106,7 @@ export function Footer() {
               <li>
                 <a
                   href="/contact"
-                  className="text-white/80 hover:text-emerald-400 font-semibold transition-colors text-sm"
+                  className="text-white/80 hover:text-lime-400 font-semibold transition-colors text-sm"
                 >
                   Get Support
                 </a>
@@ -124,10 +124,10 @@ export function Footer() {
             © {currentYear} Wavecon. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-emerald-400 transition-colors font-semibold">
+            <Link href="#" className="hover:text-lime-400 transition-colors font-semibold">
               Privacy Policy
             </Link>
-            <Link href="#" className="hover:text-emerald-400 transition-colors font-semibold">
+            <Link href="#" className="hover:text-lime-400 transition-colors font-semibold">
               Terms of Service
             </Link>
           </div>

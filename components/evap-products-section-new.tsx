@@ -148,7 +148,7 @@ export function EvapProductsSectionNew() {
                     <h3 className="text-3xl md:text-4xl font-black text-sky-900 mb-4 leading-tight">
                       About {product.name}
                     </h3>
-                    <div className="w-20 h-2 bg-emerald-500 rounded-full mb-6" />
+                    <div className="w-20 h-2 bg-lime-500 rounded-full mb-6" />
                   </div>
 
                   {product.description.map((desc, idx) => (

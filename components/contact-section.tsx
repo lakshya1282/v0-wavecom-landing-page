@@ -105,7 +105,7 @@ export function ContactSection() {
             {/* Person Card */}
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
-                <div className="w-14 h-14 rounded-full bg-emerald-400 flex items-center justify-center text-white font-black text-lg">
+                <div className="w-14 h-14 rounded-full bg-lime-400 flex items-center justify-center text-white font-black text-lg">
                   W
                 </div>
               </div>
@@ -130,7 +130,7 @@ export function ContactSection() {
                   placeholder="Message"
                   value={formData.message}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-50 text-gray-900 placeholder-gray-400 min-h-[100px] text-sm ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 min-h-[100px] text-sm ${
                     errors.message ? "border-red-500" : "border-gray-300"
                   }`}
                 />
@@ -146,7 +146,7 @@ export function ContactSection() {
                     placeholder="Name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-50 text-gray-900 placeholder-gray-400 text-sm ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 text-sm ${
                       errors.name ? "border-red-500" : "border-gray-300"
                     }`}
                   />
@@ -159,7 +159,7 @@ export function ContactSection() {
                     placeholder="Company"
                     value={formData.company}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-50 text-gray-900 placeholder-gray-400 text-sm ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 text-sm ${
                       errors.company ? "border-red-500" : "border-gray-300"
                     }`}
                   />
@@ -174,7 +174,7 @@ export function ContactSection() {
                     name="country"
                     value={formData.country}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-50 text-gray-900 text-sm ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 text-sm ${
                       errors.country ? "border-red-500" : "border-gray-300"
                     }`}
                   >
@@ -199,7 +199,7 @@ export function ContactSection() {
                     placeholder="Phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className={`flex-1 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-50 text-gray-900 placeholder-gray-400 text-sm ${
+                    className={`flex-1 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 text-sm ${
                       errors.phone ? "border-red-500" : "border-gray-300"
                     }`}
                   />
@@ -212,7 +212,7 @@ export function ContactSection() {
                   name="industry"
                   value={formData.industry}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-50 text-gray-900 text-sm ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 text-sm ${
                     errors.industry ? "border-red-500" : "border-gray-300"
                   }`}
                 >
@@ -233,7 +233,7 @@ export function ContactSection() {
                   placeholder="E-mail"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-50 text-gray-900 placeholder-gray-400 text-sm ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 text-sm ${
                     errors.email ? "border-red-500" : "border-gray-300"
                   }`}
                 />
@@ -285,7 +285,7 @@ export function ContactSection() {
                       placeholder="Message"
                       value={formData.message}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-50 text-gray-900 placeholder-gray-400 min-h-[120px] ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 min-h-[120px] ${
                         errors.message ? "border-red-500" : "border-gray-300"
                       }`}
                     />
@@ -301,7 +301,7 @@ export function ContactSection() {
                         placeholder="Name"
                         value={formData.name}
                         onChange={handleChange}
-                        className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-50 text-gray-900 placeholder-gray-400 ${
+                        className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 ${
                           errors.name ? "border-red-500" : "border-gray-300"
                         }`}
                       />
@@ -314,7 +314,7 @@ export function ContactSection() {
                         placeholder="Company"
                         value={formData.company}
                         onChange={handleChange}
-                        className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-50 text-gray-900 placeholder-gray-400 ${
+                        className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 ${
                           errors.company ? "border-red-500" : "border-gray-300"
                         }`}
                       />
@@ -329,7 +329,7 @@ export function ContactSection() {
                         name="country"
                         value={formData.country}
                         onChange={handleChange}
-                        className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-50 text-gray-900 ${
+                        className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 ${
                           errors.country ? "border-red-500" : "border-gray-300"
                         }`}
                       >
@@ -354,7 +354,7 @@ export function ContactSection() {
                         placeholder="Phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className={`flex-1 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-50 text-gray-900 placeholder-gray-400 ${
+                        className={`flex-1 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 ${
                           errors.phone ? "border-red-500" : "border-gray-300"
                         }`}
                       />
@@ -367,7 +367,7 @@ export function ContactSection() {
                       name="industry"
                       value={formData.industry}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-50 text-gray-900 ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 ${
                         errors.industry ? "border-red-500" : "border-gray-300"
                       }`}
                     >
@@ -388,7 +388,7 @@ export function ContactSection() {
                       placeholder="E-mail"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-50 text-gray-900 placeholder-gray-400 ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 ${
                         errors.email ? "border-red-500" : "border-gray-300"
                       }`}
                     />

@@ -13,7 +13,11 @@ const products = [
   { name: "VRV+AHU Cooling", href: "/vrv" },
 ]
 
-export function StickyHeader() {
+interface StickyHeaderProps {
+  theme?: "light" | "transparent"
+}
+
+export function StickyHeader({ theme = "transparent" }: StickyHeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isProductsOpen, setIsProductsOpen] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -24,9 +28,13 @@ export function StickyHeader() {
       setIsScrolled(window.scrollY > 100)
     }
 
+    if (theme === "light") {
+      setIsScrolled(true) // Force scrolled state for styling if needed, or handle in className
+    }
+
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  }, [theme])
 
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -46,24 +54,21 @@ export function StickyHeader() {
   return (
     <header
       role="banner"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || theme === "light" ? "bg-white shadow-md" : "bg-transparent"
+        }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20 md:h-24">
-          {/* Logo - Visible on scroll or always on contact page */}
-          {(isScrolled || pathname === "/contact") && (
-            <Link href="/" className="shrink-0 z-50">
-              <Image
-                src="/wc.png"
-                alt="Wavecon Logo"
-                width={399}
-                height={128}
-                className="h-[128px] w-auto"
-              />
-            </Link>
-          )}
+          {/* Logo - Always visible */}
+          <Link href="/" className="shrink-0 z-50">
+            <Image
+              src="/wc.png"
+              alt="Wavecon Logo"
+              width={399}
+              height={128}
+              className="h-[128px] w-auto"
+            />
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex flex-1 justify-center">
@@ -71,9 +76,7 @@ export function StickyHeader() {
               <li>
                 <Link
                   href="/"
-                  className={`text-base lg:text-lg font-semibold transition-colors hover:opacity-70 ${
-                    isScrolled ? "text-gray-900" : "text-blue-500"
-                  }`}
+                  className="text-base lg:text-lg font-semibold transition-colors hover:opacity-70 text-gray-900"
                 >
                   Home
                 </Link>
@@ -83,23 +86,20 @@ export function StickyHeader() {
               <li className="relative group">
                 <button
                   onClick={() => setIsProductsOpen(!isProductsOpen)}
-                  className={`text-base lg:text-lg font-semibold transition-colors hover:opacity-70 flex items-center gap-1 ${
-                    isScrolled ? "text-gray-900" : "text-blue-500"
-                  }`}
+                  className={`text-base lg:text-lg font-semibold transition-colors hover:opacity-70 flex items-center gap-1 text-gray-900`}
                 >
                   Products
                   <ChevronDown className={`w-4 h-4 transition-transform ${isProductsOpen ? "rotate-180" : ""}`} />
                 </button>
 
                 {/* Dropdown Menu */}
-                <div className={`absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg py-2 border border-gray-100 transition-all duration-200 ${
-                  isProductsOpen ? "opacity-100 visible" : "opacity-0 invisible"
-                }`}>
+                <div className={`absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg py-2 border border-gray-100 transition-all duration-200 ${isProductsOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                  }`}>
                   {products.map((product) => (
                     <Link
                       key={product.href}
                       href={product.href}
-                      className="block px-4 py-3 text-base font-semibold text-gray-900 hover:bg-emerald-50 hover:text-emerald-600 transition-colors"
+                      className="block px-4 py-3 text-base font-semibold text-gray-900 hover:bg-lime-50 hover:text-lime-600 transition-colors"
                       onClick={() => setIsProductsOpen(false)}
                     >
                       {product.name}
@@ -110,10 +110,26 @@ export function StickyHeader() {
 
               <li>
                 <Link
+                  href="/case"
+                  className="text-base lg:text-lg font-semibold transition-colors hover:opacity-70 text-gray-900"
+                >
+                  Case Studies
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/about"
+                  className="text-base lg:text-lg font-semibold transition-colors hover:opacity-70 text-gray-900"
+                >
+                  About
+                </Link>
+              </li>
+
+              <li>
+                <Link
                   href="/contact"
-                  className={`text-base lg:text-lg font-semibold transition-colors hover:opacity-70 ${
-                    isScrolled ? "text-gray-900" : "text-blue-500"
-                  }`}
+                  className="text-base lg:text-lg font-semibold transition-colors hover:opacity-70 text-gray-900"
                 >
                   Contact
                 </Link>
@@ -121,14 +137,12 @@ export function StickyHeader() {
             </ul>
           </nav>
 
-          {/* Desktop CTA Button - Visible on scroll or always on contact page */}
-          {(isScrolled || pathname === "/contact") && (
-            <Link href="/contact" className="hidden md:block">
-              <Button className="bg-lime-400 hover:bg-lime-500 text-gray-900 font-bold text-base md:text-lg px-6 py-3">
-                Get Quote
-              </Button>
-            </Link>
-          )}
+          {/* Desktop CTA Button - Always visible */}
+          <Link href="/contact" className="hidden md:block">
+            <Button className="bg-lime-400 hover:bg-lime-500 text-gray-900 font-bold text-base md:text-lg px-6 py-3">
+              Get Quote
+            </Button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -152,7 +166,7 @@ export function StickyHeader() {
               <li>
                 <Link
                   href="/"
-                  className="block text-base font-semibold text-gray-900 hover:text-emerald-600 transition-colors"
+                  className="block text-base font-semibold text-gray-900 hover:text-lime-600 transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Home
@@ -162,7 +176,7 @@ export function StickyHeader() {
               {/* Mobile Products Section */}
               <li>
                 <button
-                  className="flex items-center justify-between w-full text-base font-semibold text-gray-900 hover:text-emerald-600 transition-colors"
+                  className="flex items-center justify-between w-full text-base font-semibold text-gray-900 hover:text-lime-600 transition-colors"
                   onClick={() => setIsProductsOpen(!isProductsOpen)}
                 >
                   Products
@@ -178,7 +192,7 @@ export function StickyHeader() {
                       <li key={product.href}>
                         <Link
                           href={product.href}
-                          className="block text-sm font-semibold text-gray-700 hover:text-emerald-600 transition-colors py-1"
+                          className="block text-sm font-semibold text-gray-700 hover:text-lime-600 transition-colors py-1"
                           onClick={() => {
                             setIsMobileMenuOpen(false)
                             setIsProductsOpen(false)
@@ -194,8 +208,18 @@ export function StickyHeader() {
 
               <li>
                 <Link
+                  href="/case"
+                  className="block text-base font-semibold text-gray-900 hover:text-lime-600 transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Case Studies
+                </Link>
+              </li>
+
+              <li>
+                <Link
                   href="/contact"
-                  className="block text-base font-semibold text-gray-900 hover:text-emerald-600 transition-colors"
+                  className="block text-base font-semibold text-gray-900 hover:text-lime-600 transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Contact

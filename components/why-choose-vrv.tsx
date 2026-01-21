@@ -43,7 +43,7 @@ export function WhyChooseVrv() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-4 text-sky-900 leading-tight">
             Why Choose VRV+AHU Cooling
           </h2>
-          <p className="text-emerald-600 text-lg md:text-xl max-w-4xl mx-auto font-bold">
+          <p className="text-lime-600 text-lg md:text-xl max-w-4xl mx-auto font-bold">
             Advanced cooling technology for modern commercial and industrial needs
           </p>
         </div>

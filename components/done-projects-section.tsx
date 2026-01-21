@@ -68,7 +68,7 @@ export function DoneProjectsSection() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-4 text-sky-900 leading-tight">
             Our satisfied customers
           </h2>
-          <p className="text-emerald-600 text-lg md:text-xl font-bold">
+          <p className="text-lime-600 text-lg md:text-xl font-bold">
             Trusted by leading businesses across diverse sectors
           </p>
         </div>
@@ -117,7 +117,7 @@ export function DoneProjectsSection() {
                       <ul className="space-y-3">
                         {project.challenges.map((challenge, idx) => (
                           <li key={idx} className="flex items-start gap-3 text-white/90 text-base font-semibold">
-                            <span className="text-emerald-400 mt-0.5 flex-shrink-0">•</span>
+                            <span className="text-lime-400 mt-0.5 flex-shrink-0">•</span>
                             <span>{challenge}</span>
                           </li>
                         ))}
@@ -143,7 +143,7 @@ export function DoneProjectsSection() {
                   <h3 className="text-3xl md:text-4xl font-black text-sky-900 mb-4">
                     {project.title}
                   </h3>
-                  <div className="w-16 h-1 bg-emerald-500 rounded-full" />
+                  <div className="w-16 h-1 bg-lime-500 rounded-full" />
                 </div>
                 <p className="text-base md:text-lg text-sky-800 font-bold leading-relaxed">
                   {project.description}

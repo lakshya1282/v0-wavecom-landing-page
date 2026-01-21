@@ -50,7 +50,7 @@ export function ProductsHeroSection() {
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-stretch sm:items-center">
             <Button
               size="sm"
-              className="sm:size-lg bg-emerald-500 hover:bg-emerald-600 text-white px-3 sm:px-6 text-sm sm:text-base"
+              className="sm:size-lg bg-lime-500 hover:bg-lime-600 text-white px-3 sm:px-6 text-sm sm:text-base"
             >
               Get Quote
             </Button>

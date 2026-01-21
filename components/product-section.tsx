@@ -121,13 +121,13 @@ export function ProductSection() {
         <div className="text-center mb-12 md:mb-16" data-aos="fade-up">
           {/* Green leaf icon */}
           <div className="flex justify-center mb-4">
-            <Leaf className="w-8 h-8 text-emerald-500" />
+            <Leaf className="w-8 h-8 text-lime-500" />
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wider text-sky-900 font-black">
             OUR PRODUCTS
           </h2>
           <p className="text-gray-600 mt-3 text-xl font-semibold">Cooling the future, naturally.</p>
-          <div className="w-24 h-1 bg-emerald-500 mx-auto mt-4" />
+          <div className="w-24 h-1 bg-lime-500 mx-auto mt-4" />
         </div>
 
         {/* Product Items */}
@@ -160,7 +160,7 @@ export function ProductSection() {
                       hoveredIndex === index ? "opacity-100" : "opacity-0 pointer-events-none"
                     }`}
                   >
-                    <h4 className="text-white text-2xl md:text-3xl font-black tracking-wide mb-6 border-b-2 border-emerald-400 pb-2">
+                    <h4 className="text-white text-2xl md:text-3xl font-black tracking-wide mb-6 border-b-2 border-lime-400 pb-2">
                       KEY FEATURES:
                     </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-md">
@@ -173,7 +173,7 @@ export function ProductSection() {
                               hoveredIndex === index ? `fadeInUp 0.3s ease-out ${featureIndex * 0.1}s both` : "none",
                           }}
                         >
-                          <span className="flex-shrink-0 text-emerald-400">{feature.icon}</span>
+                          <span className="flex-shrink-0 text-lime-400">{feature.icon}</span>
                           <span className="text-sm md:text-base font-semibold">{feature.text}</span>
                         </div>
                       ))}
@@ -186,7 +186,7 @@ export function ProductSection() {
                 <div data-aos="fade-up" data-aos-delay={index * 100 + 100}>
                   <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-sky-900 mb-2">{product.title}</h3>
                   {product.subtitle && (
-                    <p className="text-xl md:text-2xl text-emerald-600 font-bold">{product.subtitle}</p>
+                    <p className="text-xl md:text-2xl text-lime-600 font-bold">{product.subtitle}</p>
                   )}
                 </div>
 
@@ -201,8 +201,8 @@ export function ProductSection() {
                 <ul className="space-y-3" data-aos="fade-up" data-aos-delay={index * 100 + 200}>
                   {product.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start gap-3 text-sky-800">
-                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center mt-0.5">
-                        <svg className="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-lime-500/20 flex items-center justify-center mt-0.5">
+                        <svg className="w-4 h-4 text-lime-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                       </span>

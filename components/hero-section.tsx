@@ -116,7 +116,7 @@ export function HeroSection() {
           {/* Tagline */}
           <div className="mb-4 text-center">
             <p className="text-base sm:text-lg text-white/90 drop-shadow-md md:text-xl">
-              One Brand. One Ecosystem. <span className="font-semibold text-emerald-400">Total Air Solutions.</span>
+              One Brand. One Ecosystem. <span className="font-semibold text-lime-400">Total Air Solutions.</span>
             </p>
           </div>
 
@@ -125,7 +125,7 @@ export function HeroSection() {
             {/* Stats Cards - Responsive grid */}
             <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-4 items-center justify-center sm:justify-start">
               <div className="rounded-lg sm:rounded-xl border border-white/20 bg-white/10 px-3 sm:px-4 py-2 sm:py-3 backdrop-blur-sm">
-                <div className="text-lg sm:text-2xl font-bold text-emerald-400">80%</div>
+                <div className="text-lg sm:text-2xl font-bold text-lime-400">80%</div>
                 <div className="text-xs text-white/80">Energy Savings</div>
               </div>
               <div className="rounded-lg sm:rounded-xl border border-white/20 bg-white/10 px-3 sm:px-4 py-2 sm:py-3 backdrop-blur-sm">
@@ -133,14 +133,14 @@ export function HeroSection() {
                 <div className="text-xs text-white/80">Years Lifespan</div>
               </div>
               <div className="rounded-lg sm:rounded-xl border border-white/20 bg-white/10 px-3 sm:px-4 py-2 sm:py-3 backdrop-blur-sm col-span-2 sm:col-span-1">
-                <div className="text-lg sm:text-2xl font-bold text-emerald-400">100%</div>
+                <div className="text-lg sm:text-2xl font-bold text-lime-400">100%</div>
                 <div className="text-xs text-white/80">Fresh Natural Air</div>
               </div>
             </div>
 
             {/* CTA Buttons - Stack on mobile */}
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
-              <Button size="sm" className="sm:size-lg bg-emerald-500 px-4 sm:px-6 text-white hover:bg-emerald-600 w-full sm:w-auto">
+              <Button size="sm" className="sm:size-lg bg-lime-500 px-4 sm:px-6 text-white hover:bg-lime-600 w-full sm:w-auto">
                 Explore Products
               </Button>
               <Button

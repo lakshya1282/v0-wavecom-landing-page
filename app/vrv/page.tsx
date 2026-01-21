@@ -40,7 +40,7 @@ export default function VRVPage() {
         <VrvProjectsSection />
         <div className="py-8 px-4 bg-white">
           <div className="container mx-auto max-w-7xl">
-            <Link href="/vrv" className="inline-flex items-center gap-2 text-lg font-semibold text-emerald-600 hover:text-emerald-700 transition-colors">
+            <Link href="/case" className="inline-flex items-center gap-2 text-lg font-semibold text-lime-600 hover:text-lime-700 transition-colors">
               View all projects VRV+AHU Cooling →
             </Link>
           </div>

@@ -30,32 +30,32 @@ export function WhyWaveconIndustrial() {
 
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3 text-sky-800">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center mt-0.5">
-                      <svg className="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-lime-500/20 flex items-center justify-center mt-0.5">
+                      <svg className="w-4 h-4 text-lime-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </span>
                     <span className="text-base md:text-lg font-bold">Heavy-duty equipment built for industrial demands</span>
                   </li>
                   <li className="flex items-start gap-3 text-sky-800">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center mt-0.5">
-                      <svg className="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-lime-500/20 flex items-center justify-center mt-0.5">
+                      <svg className="w-4 h-4 text-lime-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </span>
                     <span className="text-base md:text-lg font-bold">Maximum airflow and ventilation efficiency</span>
                   </li>
                   <li className="flex items-start gap-3 text-sky-800">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center mt-0.5">
-                      <svg className="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-lime-500/20 flex items-center justify-center mt-0.5">
+                      <svg className="w-4 h-4 text-lime-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </span>
                     <span className="text-base md:text-lg font-bold">Expert installation and professional support</span>
                   </li>
                   <li className="flex items-start gap-3 text-sky-800">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center mt-0.5">
-                      <svg className="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-lime-500/20 flex items-center justify-center mt-0.5">
+                      <svg className="w-4 h-4 text-lime-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </span>
@@ -63,7 +63,7 @@ export function WhyWaveconIndustrial() {
                   </li>
                 </ul>
 
-                <p className="text-base md:text-lg text-emerald-600 font-bold leading-relaxed pt-4">
+                <p className="text-base md:text-lg text-lime-600 font-bold leading-relaxed pt-4">
                   Choose Wavecon for industrial solutions that deliver superior performance and durability.
                 </p>
               </div>
