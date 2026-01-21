@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Mail, ChevronDown } from "lucide-react"
 
@@ -14,15 +14,7 @@ export function HeroSection() {
   const [showInspired, setShowInspired] = useState(false)
   const [showNature, setShowNature] = useState(false)
   const [showContent, setShowContent] = useState(false)
-  const videoRef = useRef<HTMLVideoElement>(null)
-
   useEffect(() => {
-    // Force video to play
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {
-        // Autoplay was prevented, video will show first frame
-      })
-    }
 
     // Staggered text animation sequence
     const inspiredTimer = setTimeout(() => setShowInspired(true), 600)
@@ -40,18 +32,11 @@ export function HeroSection() {
     <section className="relative min-h-screen w-full overflow-hidden bg-black">
       {/* Video Container with better mobile handling */}
       <div className="absolute inset-0 w-full h-full bg-black">
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%23000000' width='1920' height='1080'/%3E%3C/svg%3E"
+        <img
+          src="/Video/home.webp"
+          alt="Natural cooling background"
           className="w-full h-full object-cover"
-        >
-          <source src="/Video/home.mp4" type="video/mp4" />
-        </video>
+        />
       </div>
 
       {/* Dark overlay gradient */}
