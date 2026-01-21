@@ -39,14 +39,12 @@ export function ProductsHeroSection() {
         </video>
       </div>
 
-      {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-black/20" />
+
 
       {/* CTAs - Responsive positioning and layout */}
       <div className="absolute bottom-6 sm:bottom-12 left-4 sm:left-8 z-20">
-        <div className={`transition-all duration-700 ${
-          showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}>
+        <div className={`transition-all duration-700 ${showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-stretch sm:items-center">
             <Button
               size="sm"

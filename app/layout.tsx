@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { Inter, Playfair_Display, Bebas_Neue } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { AOSProvider } from "@/components/aos-provider"
-import { SplashScreen } from "@/components/splash-screen"
+
 import "./globals.css"
 
 const _inter = Inter({ subsets: ["latin"] })
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   description:
     "One Brand. One Ecosystem. Total Air Solutions. Evaporative Cooling Systems, Industrial Ventilation & Air Conditioning.",
   generator: "v0.app",
-  keywords: ["wave","evaporative","evaporative cooling", "industrial ventilation", "HVAC", "air conditioning", "cooling systems","VRV","wavecom","raipur","sustainable cooling","green cooling"],
+  keywords: ["wave", "evaporative", "evaporative cooling", "industrial ventilation", "HVAC", "air conditioning", "cooling systems", "VRV", "wavecom", "raipur", "sustainable cooling", "green cooling"],
   authors: [{ name: "Wavecon" }],
   creator: "Wavecon",
   publisher: "Wavecon",
@@ -66,7 +66,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans antialiased`}>
-        <SplashScreen />
+
         <AOSProvider>{children}</AOSProvider>
         <Analytics />
       </body>

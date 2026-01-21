@@ -57,7 +57,7 @@ export function ProductStickyHeader({ theme = "transparent" }: StickyHeaderProps
     return (
         <header
             role="banner"
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || theme === "light" ? "bg-white shadow-md" : "bg-transparent"
+            className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${isScrolled ? "shadow-md" : ""
                 }`}
         >
             <div className="container mx-auto px-4">

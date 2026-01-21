@@ -31,8 +31,7 @@ export function VrvHeroSection() {
         </video>
       </div>
 
-      {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-black/20" />
+
 
       {/* CTAs - Responsive positioning and layout */}
       <div className="absolute bottom-6 sm:bottom-12 left-4 sm:left-8 z-20">
