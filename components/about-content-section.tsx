@@ -32,6 +32,8 @@ export function AboutContentSection() {
                             loop
                             muted
                             playsInline
+                            preload="auto"
+                            poster="/Video/about.webp"
                         />
                     </div>
                 </div>

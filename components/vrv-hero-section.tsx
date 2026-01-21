@@ -9,14 +9,6 @@ export function VrvHeroSection() {
   const [showContent, setShowContent] = useState(false)
 
   useEffect(() => {
-    const videoElement = videoRef.current
-    if (videoElement) {
-      // Try to play immediately
-      videoElement.play().catch(() => {
-        // Autoplay was prevented
-      })
-    }
-
     // Show content immediately (no delay)
     setShowContent(true)
   }, [])
@@ -32,7 +24,7 @@ export function VrvHeroSection() {
           muted
           loop
           playsInline
-          preload="none"
+          preload="auto"
         >
           <source src="/Video/vrv.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -44,9 +36,8 @@ export function VrvHeroSection() {
 
       {/* CTAs - Responsive positioning and layout */}
       <div className="absolute bottom-6 sm:bottom-12 left-4 sm:left-8 z-20">
-        <div className={`transition-all duration-700 ${
-          showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}>
+        <div className={`transition-all duration-700 ${showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-stretch sm:items-center">
             <Button
               size="sm"

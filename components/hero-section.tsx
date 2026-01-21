@@ -36,6 +36,9 @@ export function HeroSection() {
           src="/Video/home.webp"
           alt="Natural cooling background"
           className="w-full h-full object-cover"
+          loading="eager"
+          // @ts-ignore
+          fetchPriority="high"
         />
       </div>
 
@@ -47,9 +50,8 @@ export function HeroSection() {
         <div className="text-left space-y-2">
           {/* "Inspired by" text - green italic */}
           <div
-            className={`transition-all duration-1000 ease-out ${
-              showInspired ? "translate-y-0 opacity-100" : "-translate-y-8 opacity-0"
-            }`}
+            className={`transition-all duration-1000 ease-out ${showInspired ? "translate-y-0 opacity-100" : "-translate-y-8 opacity-0"
+              }`}
           >
             <span
               className="font-serif text-sm sm:text-lg italic tracking-wide md:text-xl lg:text-2xl"
@@ -67,9 +69,8 @@ export function HeroSection() {
 
           {/* "Nature." text - responsive sizing */}
           <h1
-            className={`font-display font-black leading-tight transition-all duration-1000 ease-out text-5xl sm:text-6xl md:text-8xl lg:text-9xl ${
-              showNature ? "translate-y-0 opacity-100 scale-100" : "translate-y-10 opacity-0 scale-95"
-            }`}
+            className={`font-display font-black leading-tight transition-all duration-1000 ease-out text-5xl sm:text-6xl md:text-8xl lg:text-9xl ${showNature ? "translate-y-0 opacity-100 scale-100" : "translate-y-10 opacity-0 scale-95"
+              }`}
             style={{
               background: "linear-gradient(180deg, #ffffff 0%, #f0f0f0 30%, #ffffff 50%, #e0e0e0 70%, #ffffff 100%)",
               WebkitBackgroundClip: "text",
@@ -91,9 +92,8 @@ export function HeroSection() {
 
       {/* Bottom Content - Improved mobile layout */}
       <div
-        className={`absolute inset-x-0 bottom-0 z-10 px-4 pb-6 sm:px-6 sm:pb-8 transition-all duration-1000 delay-500 ${
-          showContent ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-        }`}
+        className={`absolute inset-x-0 bottom-0 z-10 px-4 pb-6 sm:px-6 sm:pb-8 transition-all duration-1000 delay-500 ${showContent ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
       >
         <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/40 to-transparent -z-10" />
 
