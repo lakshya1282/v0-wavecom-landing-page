@@ -22,12 +22,12 @@ export function ProductsHeroSection() {
   }, [])
 
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-black">
+    <section className="relative w-full min-h-screen bg-black overflow-x-auto overflow-y-hidden md:overflow-hidden">
       {/* Video Background - Improved for mobile */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="relative h-screen min-w-[100vw] md:absolute md:inset-0 md:w-full md:h-full">
         <video
           ref={videoRef}
-          className="w-full h-full object-cover"
+          className="h-full w-auto max-w-none min-w-full md:w-full md:object-cover"
           autoPlay
           muted
           loop
