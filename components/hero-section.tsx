@@ -32,14 +32,15 @@ export function HeroSection() {
     <section className="relative min-h-screen w-full overflow-hidden bg-black">
       {/* Video Container with better mobile handling */}
       <div className="absolute inset-0 w-full h-full bg-black">
-        <img
-          src="/Video/home.webp"
-          alt="Natural cooling background"
-          className="w-full h-full object-cover"
-          loading="eager"
-          // @ts-ignore
-          fetchPriority="high"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover scale-125"
+        >
+          <source src="/Video/home.webm" type="video/webm" />
+        </video>
       </div>
 
       {/* Dark overlay gradient */}
