@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title: "Wavecon - Cooling The Future, Naturally",
   description:
     "One Brand. One Ecosystem. Total Air Solutions. Evaporative Cooling Systems, Industrial Ventilation & Air Conditioning.",
-  generator: "v0.app",
+  generator: "Next.js",
   keywords: ["wave", "evaporative", "evaporative cooling", "industrial ventilation", "HVAC", "air conditioning", "cooling systems", "VRV", "wavecom", "raipur", "sustainable cooling", "green cooling"],
   authors: [{ name: "Wavecon" }],
   creator: "Wavecon",
@@ -31,14 +31,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://wavecon.com",
+    url: "https://thewavecon.com",
     title: "Wavecon - Cooling The Future, Naturally",
     description: "One Brand. One Ecosystem. Total Air Solutions.",
     images: [
       {
-        url: "https://wavecon.com/wc.png",
-        width: 399,
-        height: 128,
+        url: "/wc.png",
+        width: 1200,
+        height: 630,
         alt: "Wavecon Logo",
       },
     ],
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     icon: "/wc.png",
     apple: "/apple-icon.png",
   },
-  metadataBase: new URL("https://wavecon.com"),
+  metadataBase: new URL("https://thewavecon.com"),
 }
 
 export default function RootLayout({
