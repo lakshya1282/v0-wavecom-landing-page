@@ -137,14 +137,13 @@ export function ProductSection() {
               key={index}
               data-aos={product.reverse ? "fade-left" : "fade-right"}
               data-aos-delay={index * 100}
-              className={`flex flex-col ${
-                product.reverse ? "lg:flex-row-reverse" : "lg:flex-row"
-              } gap-8 lg:gap-12 items-stretch`}
+              className={`flex flex-col ${product.reverse ? "lg:flex-row-reverse" : "lg:flex-row"
+                } gap-8 lg:gap-12 items-stretch`}
             >
               {/* Image with Hover Overlay */}
               <div className="w-full lg:w-1/2" data-aos="zoom-in" data-aos-delay={index * 100 + 200}>
                 <div
-                  className="relative w-full h-full min-h-[400px] md:min-h-[500px] lg:min-h-[550px] rounded-2xl overflow-hidden shadow-xl cursor-pointer group"
+                  className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl cursor-pointer group"
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
@@ -152,13 +151,12 @@ export function ProductSection() {
                     src={product.image || "/placeholder.svg"}
                     alt={product.imageAlt}
                     fill
-                    className="object-contain transition-transform duration-300 group-hover:scale-105"
+                    className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105"
                   />
 
                   <div
-                    className={`absolute inset-0 bg-sky-900/95 flex flex-col items-center justify-center p-6 transition-opacity duration-300 ${
-                      hoveredIndex === index ? "opacity-100" : "opacity-0 pointer-events-none"
-                    }`}
+                    className={`absolute inset-0 bg-sky-900/95 flex flex-col items-center justify-center p-6 transition-opacity duration-300 ${hoveredIndex === index ? "opacity-100" : "opacity-0 pointer-events-none"
+                      }`}
                   >
                     <h4 className="text-white text-2xl md:text-3xl font-black tracking-wide mb-6 border-b-2 border-lime-400 pb-2">
                       KEY FEATURES:

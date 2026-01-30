@@ -97,21 +97,20 @@ export function EvapProductsSectionNew() {
             <div key={productIndex}>
               {/* Product Layout - Alternating */}
               <div
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16 ${
-                  productIndex % 2 === 1 ? "lg:grid-flow-dense" : ""
-                }`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16 ${productIndex % 2 === 1 ? "lg:grid-flow-dense" : ""
+                  }`}
                 data-aos={productIndex % 2 === 0 ? "fade-right" : "fade-left"}
                 data-aos-duration="800"
               >
                 {/* Left Side - Image and Components Grid */}
                 <div>
                   {/* Main Product Image */}
-                  <div className="relative w-full h-96 overflow-hidden rounded-lg mb-8 shadow-xl bg-white flex items-center justify-center">
+                  <div className="relative w-full aspect-video overflow-hidden rounded-lg mb-8 shadow-xl bg-white flex items-center justify-center">
                     <Image
                       src={product.mainImage}
                       alt={`${product.name} main product`}
-                      width={450}
-                      height={350}
+                      width={800}
+                      height={450}
                       className="object-contain w-full h-full"
                     />
                   </div>
@@ -124,13 +123,13 @@ export function EvapProductsSectionNew() {
                           key={component.id}
                           className="flex flex-col items-center"
                         >
-                          <div className="relative w-full h-24 md:h-28 overflow-hidden rounded-lg mb-3 bg-white shadow-md flex items-center justify-center">
+                          <div className="relative w-full aspect-video overflow-hidden rounded-lg mb-3 bg-white shadow-md flex items-center justify-center">
                             <Image
                               src={component.image}
                               alt={`${product.name} ${component.label}`}
-                              width={150}
-                              height={120}
-                              className="object-contain"
+                              width={300}
+                              height={169}
+                              className="object-contain w-full h-full"
                             />
                           </div>
                           <p className="text-sm text-center text-gray-600 font-medium">
