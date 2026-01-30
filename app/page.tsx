@@ -5,7 +5,7 @@ import { CaseStudiesSection } from "@/components/case-studies-section"
 import { ClientsSection } from "@/components/clients-section"
 import { ShareChallengesSection } from "@/components/share-challenges-section"
 import { Footer } from "@/components/footer"
-import CaseStudiesSectionNew from "@/components/case"
+import { AskQueriesPopup } from "@/components/ask-queries-popup"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -44,6 +44,7 @@ export default function Home() {
         <CaseStudiesSection />
         <ClientsSection />
         <ShareChallengesSection />
+        <AskQueriesPopup />
       </main>
       <Footer />
     </>

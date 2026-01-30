@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Mail, ChevronDown } from "lucide-react"
+import Link from "next/link"
 
 const products = [
   { name: "Evaporative Cooling", href: "/products" },
@@ -126,17 +127,21 @@ export function HeroSection() {
 
             {/* CTA Buttons - Stack on mobile */}
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
-              <Button size="sm" className="sm:size-lg bg-lime-500 px-4 sm:px-6 text-white hover:bg-lime-600 w-full sm:w-auto">
-                Explore Products
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                className="sm:size-lg border-white/30 bg-white/10 px-4 sm:px-6 text-white backdrop-blur-sm hover:bg-white/20 w-full sm:w-auto flex items-center justify-center gap-2"
-              >
-                <Mail className="h-3 w-3 sm:h-4 sm:w-4" />
-                Contact Us
-              </Button>
+              <Link href="/products" className="w-full sm:w-auto">
+                <Button size="sm" className="sm:size-lg bg-lime-500 px-4 sm:px-6 text-white hover:bg-lime-600 w-full sm:w-auto">
+                  Explore Products
+                </Button>
+              </Link>
+              <Link href="/contact" className="w-full sm:w-auto">
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="sm:size-lg border-white/30 bg-white/10 px-4 sm:px-6 text-white backdrop-blur-sm hover:bg-white/20 w-full sm:w-auto flex items-center justify-center gap-2"
+                >
+                  <Mail className="h-3 w-3 sm:h-4 sm:w-4" />
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

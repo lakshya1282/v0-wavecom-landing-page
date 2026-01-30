@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { ChevronDown, Menu, X } from "lucide-react"
 
 const products = [
-  { name: "Evaporative Cooling", href: "/products" },
+  { name: "Evaporative Cooling", href: "/evaporative-cooling" },
   { name: "Industrial Fans", href: "/industrial" },
   { name: "VRV+AHU Cooling", href: "/vrv" },
 ]

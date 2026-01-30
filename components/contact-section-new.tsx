@@ -79,8 +79,31 @@ export function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (validateForm()) {
-      console.log("Form submitted:", formData)
-      // Add API call here
+      const text = `*New Inquiry from Website*
+      
+*Name:* ${formData.name}
+*Company:* ${formData.company}
+*Industry:* ${formData.industry}
+*Country:* ${countries.find(c => c.code === formData.country)?.name}
+*Phone:* ${selectedCountry?.phone} ${formData.phone}
+*Email:* ${formData.email}
+
+*Message:*
+${formData.message}`
+
+      const encodedText = encodeURIComponent(text)
+      window.open(`https://wa.me/919343990618?text=${encodedText}`, '_blank')
+
+      // Optional: Reset form
+      setFormData({
+        message: "",
+        name: "",
+        company: "",
+        country: "IN",
+        industry: "",
+        phone: "",
+        email: "",
+      })
     }
   }
 
@@ -129,9 +152,8 @@ export function ContactSection() {
                   placeholder="Message"
                   value={formData.message}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 min-h-25 text-sm ${
-                    errors.message ? "border-red-500" : "border-gray-300"
-                  }`}
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 min-h-25 text-sm ${errors.message ? "border-red-500" : "border-gray-300"
+                    }`}
                 />
                 {errors.message && <p className="text-red-500 text-xs mt-1 font-semibold">{errors.message}</p>}
               </div>
@@ -145,9 +167,8 @@ export function ContactSection() {
                     placeholder="Name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 text-sm ${
-                      errors.name ? "border-red-500" : "border-gray-300"
-                    }`}
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 text-sm ${errors.name ? "border-red-500" : "border-gray-300"
+                      }`}
                   />
                   {errors.name && <p className="text-red-500 text-xs mt-1 font-semibold">{errors.name}</p>}
                 </div>
@@ -158,9 +179,8 @@ export function ContactSection() {
                     placeholder="Company"
                     value={formData.company}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 text-sm ${
-                      errors.company ? "border-red-500" : "border-gray-300"
-                    }`}
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 text-sm ${errors.company ? "border-red-500" : "border-gray-300"
+                      }`}
                   />
                   {errors.company && <p className="text-red-500 text-xs mt-1 font-semibold">{errors.company}</p>}
                 </div>
@@ -173,9 +193,8 @@ export function ContactSection() {
                     name="country"
                     value={formData.country}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 text-sm ${
-                      errors.country ? "border-red-500" : "border-gray-300"
-                    }`}
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 text-sm ${errors.country ? "border-red-500" : "border-gray-300"
+                      }`}
                   >
                     {countries.map((country) => (
                       <option key={country.code} value={country.code}>
@@ -198,9 +217,8 @@ export function ContactSection() {
                     placeholder="Phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className={`flex-1 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 text-sm ${
-                      errors.phone ? "border-red-500" : "border-gray-300"
-                    }`}
+                    className={`flex-1 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 text-sm ${errors.phone ? "border-red-500" : "border-gray-300"
+                      }`}
                   />
                 </div>
               </div>
@@ -211,9 +229,8 @@ export function ContactSection() {
                   name="industry"
                   value={formData.industry}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 text-sm ${
-                    errors.industry ? "border-red-500" : "border-gray-300"
-                  }`}
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 text-sm ${errors.industry ? "border-red-500" : "border-gray-300"
+                    }`}
                 >
                   {industries.map((industry) => (
                     <option key={industry} value={industry === "Select Industry" ? "" : industry}>
@@ -232,9 +249,8 @@ export function ContactSection() {
                   placeholder="E-mail"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 text-sm ${
-                    errors.email ? "border-red-500" : "border-gray-300"
-                  }`}
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 bg-gray-50 text-gray-900 placeholder-gray-400 text-sm ${errors.email ? "border-red-500" : "border-gray-300"
+                    }`}
                 />
                 {errors.email && <p className="text-red-500 text-xs mt-1 font-semibold">{errors.email}</p>}
               </div>
