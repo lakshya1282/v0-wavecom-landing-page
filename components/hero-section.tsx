@@ -58,7 +58,7 @@ export function HeroSection() {
 
       {/* Main content */}
       <div className="relative z-10 flex flex-col items-start justify-center min-h-screen px-4 pt-20 sm:px-6 md:px-16 lg:px-24">
-        <div className="text-left space-y-2">
+        <div className="text-left space-y-2 hidden md:block">
           {/* "Inspired by" text - green italic */}
           <div
             className={`transition-all duration-1000 ease-out ${showInspired ? "translate-y-0 opacity-100" : "-translate-y-8 opacity-0"
