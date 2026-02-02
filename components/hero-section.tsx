@@ -31,8 +31,17 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-black">
-      {/* Video Container with better mobile handling */}
-      <div className="absolute inset-0 w-full h-full bg-black">
+      {/* Mobile: Static Image */}
+      <div className="absolute inset-0 w-full h-full bg-black md:hidden">
+        <img
+          src="/images/hero sectionmobile.png"
+          alt="Wavecom Hero"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Desktop: Video Container */}
+      <div className="absolute inset-0 w-full h-full bg-black hidden md:block">
         <video
           autoPlay
           muted
@@ -100,8 +109,8 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/40 to-transparent -z-10" />
 
         <div className="mx-auto max-w-7xl">
-          {/* Tagline */}
-          <div className="mb-4 text-center">
+          {/* Tagline - Hidden on mobile */}
+          <div className="mb-4 text-center hidden md:block">
             <p className="text-base sm:text-lg text-white/90 drop-shadow-md md:text-xl">
               One Brand. One Ecosystem. <span className="font-semibold text-lime-400">Total Air Solutions.</span>
             </p>
@@ -109,8 +118,8 @@ export function HeroSection() {
 
           {/* Stats and CTA Row - Stack on mobile */}
           <div className="flex flex-col gap-4 sm:gap-6 md:flex-row md:items-center md:justify-between">
-            {/* Stats Cards - Responsive grid */}
-            <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-4 items-center justify-center sm:justify-start">
+            {/* Stats Cards - Hidden on mobile */}
+            <div className="hidden md:flex md:flex-wrap gap-2 sm:gap-4 items-center justify-center sm:justify-start">
               <div className="rounded-lg sm:rounded-xl border border-white/20 bg-white/10 px-3 sm:px-4 py-2 sm:py-3 backdrop-blur-sm">
                 <div className="text-lg sm:text-2xl font-bold text-lime-400">80%</div>
                 <div className="text-xs text-white/80">Energy Savings</div>
