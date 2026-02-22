@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Phone } from "lucide-react"
+import Link from "next/link"
 
 export function VrvHeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -41,22 +42,27 @@ export function VrvHeroSection() {
             <Button
               size="sm"
               className="sm:size-lg bg-lime-500 hover:bg-lime-600 text-white px-3 sm:px-6 text-sm sm:text-base"
+              asChild
             >
-              Get Quote
+              <Link href="/contact">Get Quote</Link>
             </Button>
             <Button
               size="sm"
               className="sm:size-lg bg-blue-500 hover:bg-blue-600 text-white flex items-center justify-center gap-1 sm:gap-2 px-3 sm:px-6 text-sm sm:text-base"
+              asChild
             >
-              <Phone size={16} className="sm:size-5" />
-              <span>Consult Engineer</span>
+              <a href="tel:9343990618">
+                <Phone size={16} className="sm:size-5" />
+                <span>Consult Engineer</span>
+              </a>
             </Button>
             <Button
               size="sm"
               variant="outline"
               className="sm:size-lg border-white text-white/70 hover:text-white hover:bg-white/20 bg-white/5 px-3 sm:px-6 text-sm sm:text-base transition-all"
+              asChild
             >
-              Learn More
+              <Link href="/products">Learn More</Link>
             </Button>
           </div>
         </div>

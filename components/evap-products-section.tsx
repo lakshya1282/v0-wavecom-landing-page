@@ -67,11 +67,6 @@ export function EvapProductsSection() {
               <p className="text-gray-600 leading-relaxed">
                 Experience ultimate cooling comfort with our Desert Cooler Pro. Engineered for maximum efficiency, this system delivers 100% fresh air circulation while reducing your electricity bills by up to 80%.
               </p>
-              <div className="pt-4">
-                <Button className="bg-blue-500 hover:bg-blue-600 text-white">
-                  Learn More
-                </Button>
-              </div>
             </div>
           </div>
 
@@ -124,11 +119,6 @@ export function EvapProductsSection() {
               <p className="text-gray-600 leading-relaxed">
                 Our AquaCool Max system features smart automation, remote control capabilities, and automatic cleaning cycles to maintain optimal performance year-round.
               </p>
-              <div className="pt-4">
-                <Button className="bg-blue-500 hover:bg-blue-600 text-white">
-                  Learn More
-                </Button>
-              </div>
             </div>
             <div className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden rounded-lg">
               <Image
@@ -160,11 +150,6 @@ export function EvapProductsSection() {
               <p className="text-gray-600 leading-relaxed">
                 Built for sustainability, our EcoFresh Elite system combines environmental responsibility with powerful cooling performance, perfect for eco-conscious businesses.
               </p>
-              <div className="pt-4">
-                <Button className="bg-blue-500 hover:bg-blue-600 text-white">
-                  Learn More
-                </Button>
-              </div>
             </div>
           </div>
         </div>

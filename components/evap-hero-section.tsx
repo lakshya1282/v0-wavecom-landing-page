@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Phone } from "lucide-react"
+import Link from "next/link"
 
 export function EvapHeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -44,23 +45,26 @@ export function EvapHeroSection() {
 
       {/* CTAs - Responsive positioning */}
       <div className="absolute bottom-6 sm:bottom-12 right-4 sm:right-8 z-20">
-        <div className={`transition-all duration-700 ${
-          showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}>
+        <div className={`transition-all duration-700 ${showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}>
           <div className="flex flex-col gap-2 sm:gap-4">
             <Button
               size="sm"
               className="sm:size-lg bg-blue-500 hover:bg-blue-600 text-white flex items-center justify-center sm:justify-start gap-2 w-full sm:w-auto"
+              asChild
             >
-              <Phone size={16} className="sm:size-5" />
-              <span className="text-sm sm:text-base">Consult Engineer</span>
+              <a href="tel:9343990618">
+                <Phone size={16} className="sm:size-5" />
+                <span className="text-sm sm:text-base">Consult Engineer</span>
+              </a>
             </Button>
             <Button
               size="sm"
               variant="outline"
               className="sm:size-lg border-white text-white hover:bg-white/10 w-full sm:w-auto"
+              asChild
             >
-              Learn More
+              <Link href="/products">Learn More</Link>
             </Button>
           </div>
         </div>

@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter, Playfair_Display, Bebas_Neue } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { AOSProvider } from "@/components/aos-provider"
+import { WhatsAppButton } from "@/components/whatsapp-button"
 
 import "./globals.css"
 
@@ -66,8 +67,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans antialiased`}>
-
         <AOSProvider>{children}</AOSProvider>
+        <WhatsAppButton />
         <Analytics />
       </body>
     </html>

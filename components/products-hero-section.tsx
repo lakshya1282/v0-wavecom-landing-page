@@ -59,13 +59,6 @@ export function ProductsHeroSection() {
               <Phone size={16} className="sm:size-5" />
               <span>Consult Engineer</span>
             </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              className="sm:size-lg border-white text-white/70 hover:text-white hover:bg-white/20 bg-white/5 px-3 sm:px-6 text-sm sm:text-base transition-all"
-            >
-              Learn More
-            </Button>
           </div>
         </div>
       </div>
